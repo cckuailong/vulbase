@@ -10,7 +10,7 @@
 
 ```
 docker pull vultarget/vulbase:0.1
-docker run -it -d -p 80:80 vulbase:0.1
+docker run -it -d -p 80:80 vultarget/vulbase:0.1
 ```
 
 ## 加入basic auth认证机制
@@ -20,5 +20,5 @@ docker run -it -d -p 80:80 vulbase:0.1
 自定义密码
 
 ```
-docker run -it -d -e AUTH_PASS="yourpassword" -p 80:80 vulbase:0.1
+docker run -it -d -e AUTH_PASS="yourpassword" -p 80:80 vultarget/vulbase:0.1
 ```
