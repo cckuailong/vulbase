@@ -1,3 +1,0 @@
-# NVIDIA
-
-#### NVIDIA GPU显示驱动程序 信息泄露 CVE-2021-1056

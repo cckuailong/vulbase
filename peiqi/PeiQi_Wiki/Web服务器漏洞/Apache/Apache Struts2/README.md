@@ -1,3 +1,0 @@
-# Apache Struts2
-
-#### 

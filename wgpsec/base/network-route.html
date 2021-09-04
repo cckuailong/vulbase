@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>【网络基础】路由协议 | 狼组安全团队公开知识库</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/assets/logo.svg">
+    <script type="text/javascript" src="/assets/js/push.js"></script>
+    <meta name="description" content="致力于打造信息安全乌托邦">
+    <meta name="referrer" content="never">
+    <meta name="keywords" content="知识库,公开知识库,狼组,狼组安全团队知识库,knowledge">
+    <link rel="preload" href="/assets/css/0.styles.84349700.css" as="style"><link rel="preload" href="/assets/js/app.c3aa4cb1.js" as="script"><link rel="preload" href="/assets/js/2.d0142fc9.js" as="script"><link rel="preload" href="/assets/js/20.08030759.js" as="script"><link rel="prefetch" href="/assets/js/10.578912f6.js"><link rel="prefetch" href="/assets/js/11.7cc673a6.js"><link rel="prefetch" href="/assets/js/12.0f42fbc0.js"><link rel="prefetch" href="/assets/js/13.351eff9b.js"><link rel="prefetch" href="/assets/js/14.38c9103e.js"><link rel="prefetch" href="/assets/js/15.53725388.js"><link rel="prefetch" href="/assets/js/16.35abc32e.js"><link rel="prefetch" href="/assets/js/17.a65f41b1.js"><link rel="prefetch" href="/assets/js/18.c889bf7d.js"><link rel="prefetch" href="/assets/js/19.064f355c.js"><link rel="prefetch" href="/assets/js/21.9747778b.js"><link rel="prefetch" href="/assets/js/22.891a3b42.js"><link rel="prefetch" href="/assets/js/23.528d8633.js"><link rel="prefetch" href="/assets/js/24.3344e14a.js"><link rel="prefetch" href="/assets/js/25.42fe530e.js"><link rel="prefetch" href="/assets/js/26.cb0ef40e.js"><link rel="prefetch" href="/assets/js/27.8c9ed9ea.js"><link rel="prefetch" href="/assets/js/28.0bdc893d.js"><link rel="prefetch" href="/assets/js/29.b5a19dd9.js"><link rel="prefetch" href="/assets/js/3.c435fe06.js"><link rel="prefetch" href="/assets/js/30.6c197c1d.js"><link rel="prefetch" href="/assets/js/31.4382ca9b.js"><link rel="prefetch" href="/assets/js/32.50d2b789.js"><link rel="prefetch" href="/assets/js/33.2405030f.js"><link rel="prefetch" href="/assets/js/34.3e473ecb.js"><link rel="prefetch" href="/assets/js/35.b1021372.js"><link rel="prefetch" href="/assets/js/36.d2343e63.js"><link rel="prefetch" href="/assets/js/37.c2383b80.js"><link rel="prefetch" href="/assets/js/38.184f9233.js"><link rel="prefetch" href="/assets/js/39.ff3fb792.js"><link rel="prefetch" href="/assets/js/4.0786d7cf.js"><link rel="prefetch" href="/assets/js/40.f4d69e71.js"><link rel="prefetch" href="/assets/js/41.1c64af17.js"><link rel="prefetch" href="/assets/js/42.3e633511.js"><link rel="prefetch" href="/assets/js/43.e24d587f.js"><link rel="prefetch" href="/assets/js/44.2acdbc60.js"><link rel="prefetch" href="/assets/js/45.5ba65078.js"><link rel="prefetch" href="/assets/js/46.c406ae62.js"><link rel="prefetch" href="/assets/js/47.d5cc3d6e.js"><link rel="prefetch" href="/assets/js/48.f1465cf2.js"><link rel="prefetch" href="/assets/js/49.a68ec735.js"><link rel="prefetch" href="/assets/js/5.bf6fb60a.js"><link rel="prefetch" href="/assets/js/50.8ed16ca1.js"><link rel="prefetch" href="/assets/js/51.8706757d.js"><link rel="prefetch" href="/assets/js/52.56570ef7.js"><link rel="prefetch" href="/assets/js/53.0f63b1fc.js"><link rel="prefetch" href="/assets/js/54.28232ed2.js"><link rel="prefetch" href="/assets/js/55.111faa77.js"><link rel="prefetch" href="/assets/js/56.e041694b.js"><link rel="prefetch" href="/assets/js/57.dda2ae9f.js"><link rel="prefetch" href="/assets/js/58.e0e4bd8b.js"><link rel="prefetch" href="/assets/js/59.4a736cf8.js"><link rel="prefetch" href="/assets/js/6.8f42e8dd.js"><link rel="prefetch" href="/assets/js/60.be0f158d.js"><link rel="prefetch" href="/assets/js/61.8529948f.js"><link rel="prefetch" href="/assets/js/62.df333952.js"><link rel="prefetch" href="/assets/js/63.a1e6e8ed.js"><link rel="prefetch" href="/assets/js/64.8a11466c.js"><link rel="prefetch" href="/assets/js/65.a910c489.js"><link rel="prefetch" href="/assets/js/66.feeb988d.js"><link rel="prefetch" href="/assets/js/67.2dacbfbc.js"><link rel="prefetch" href="/assets/js/68.716b7b54.js"><link rel="prefetch" href="/assets/js/69.c2b4ac72.js"><link rel="prefetch" href="/assets/js/7.6560ae70.js"><link rel="prefetch" href="/assets/js/70.34e3bdd3.js"><link rel="prefetch" href="/assets/js/71.32db8382.js"><link rel="prefetch" href="/assets/js/72.af0fbfe1.js"><link rel="prefetch" href="/assets/js/73.d169fd2e.js"><link rel="prefetch" href="/assets/js/74.5b5cbd54.js"><link rel="prefetch" href="/assets/js/75.ff11acc4.js"><link rel="prefetch" href="/assets/js/76.36b551bb.js"><link rel="prefetch" href="/assets/js/77.c2e662d2.js"><link rel="prefetch" href="/assets/js/78.5d447b18.js"><link rel="prefetch" href="/assets/js/79.4e9f7894.js"><link rel="prefetch" href="/assets/js/8.dd6a6707.js"><link rel="prefetch" href="/assets/js/80.bb02e0e4.js"><link rel="prefetch" href="/assets/js/81.616e772d.js"><link rel="prefetch" href="/assets/js/82.01bda1a4.js"><link rel="prefetch" href="/assets/js/83.875807e3.js"><link rel="prefetch" href="/assets/js/84.48ffbdb6.js"><link rel="prefetch" href="/assets/js/9.081147f1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.84349700.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="ant-row"><div class="sidebar-button"><i aria-label="icon: bars" class="anticon anticon-bars"><svg viewBox="0 0 1024 1024" focusable="false" data-icon="bars" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M912 192H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM104 228a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0z"></path></svg></i> <span></span></div> <div class="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-6 ant-col-lg-5 ant-col-xl-5 ant-col-xxl-4"><a href="/" class="router-link-active home-link"><img src="/assets/logo.svg" alt="狼组安全团队公开知识库" class="logo"> <span class="site-name">狼组安全团队公开知识库</span></a> <div class="search-box mobile-search"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div> <div class="ant-col ant-col-xs-0 ant-col-sm-0 ant-col-md-18 ant-col-lg-19 ant-col-xl-19 ant-col-xxl-20"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><ul role="menu" id="nav" class="ant-menu ant-menu-horizontal ant-menu-root ant-menu-light"><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" mode="horizontal" level="1" inlineIndent="24" renderMenuItem="function () { [native code] }" rootPrefixCls="ant-menu" index="0" parentMenu="[object Object]" manualRef="function () { [native code] }" eventKey="/" openTransitionName="slide-up" openKeys="" selectedKeys="/wgpsec/base/" triggerSubMenuAction="hover" subMenuKey="0-menu-" class="ant-menu-item"><a href="/" class="router-link-active">
+          首页
+        </a></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" mode="horizontal" level="1" inlineIndent="24" renderMenuItem="function () { [native code] }" rootPrefixCls="ant-menu" index="1" parentMenu="[object Object]" manualRef="function () { [native code] }" eventKey="/guide/" openTransitionName="slide-up" openKeys="" selectedKeys="/wgpsec/base/" triggerSubMenuAction="hover" subMenuKey="0-menu-" class="ant-menu-item"><a href="/guide/">
+          使用指南
+        </a></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" mode="horizontal" level="1" inlineIndent="24" renderMenuItem="function () { [native code] }" rootPrefixCls="ant-menu" index="2" parentMenu="[object Object]" manualRef="function () { [native code] }" eventKey="/wgpsec/" openTransitionName="slide-up" openKeys="" selectedKeys="/wgpsec/base/" triggerSubMenuAction="hover" subMenuKey="0-menu-" class="ant-menu-item"><a href="/wgpsec/" class="router-link-active">
+          知识库
+        </a></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="display:none;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li><li role="menuitem" mode="horizontal" level="1" inlineIndent="24" renderMenuItem="function () { [native code] }" rootPrefixCls="ant-menu" index="3" parentMenu="[object Object]" manualRef="function () { [native code] }" eventKey="/opensource/" openTransitionName="slide-up" openKeys="" selectedKeys="/wgpsec/base/" triggerSubMenuAction="hover" subMenuKey="0-menu-" class="ant-menu-item"><a href="/opensource/">
+          开源项目
+        </a></li><li role="menuitem" class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu" style="visibility:hidden;position:absolute;"><div aria-haspopup="true" class="ant-menu-submenu-title"><span>···</span><i class="ant-menu-submenu-arrow"></i></div></li></ul> <a href="https://github.com/wgpsec" target="_blank" rel="noopener noreferrer" class="repo-link"><i aria-label="icon: github" class="anticon anticon-github"><svg viewBox="64 64 896 896" focusable="false" data-icon="github" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg></i></a></nav></div></div> <!----></header> <aside class="sidebar"><div><div class="ads"><div id="ads_3"><div class="ads_title">赞助商</div> <button type="button" class="ant-btn ant-btn-primary ant-btn-background-ghost"><span>成为赞助商</span></button></div></div> <div role="separator" id="reset-margin" class="ant-divider ant-divider-horizontal ant-divider-dashed"></div></div> <ul class="sidebar-links"><li><a href="/wgpsec/" aria-current="page" title="知识库广告位招租" class="sidebar-link">知识库广告位招租</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CTF</span> <span class="arrow right"><i aria-label="icon: down" class="anticon anticon-down"><svg viewBox="64 64 896 896" focusable="false" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>基础知识</span> <span class="arrow down"><i aria-label="icon: down" class="anticon anticon-down"><svg viewBox="64 64 896 896" focusable="false" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/wgpsec/base/" aria-current="page" title="分类简介" class="sidebar-link">分类简介</a></li><li><a href="/wgpsec/base/safety.html" title="网络安全设备常识" class="sidebar-link">网络安全设备常识</a></li><li><a href="/wgpsec/base/network-web.html" title="【网络基础】Web应用常识" class="sidebar-link">【网络基础】Web应用常识</a></li><li><a href="/wgpsec/base/network-tcp-ip.html" title="【网络基础】TCP/IP协议" class="sidebar-link">【网络基础】TCP/IP协议</a></li><li><a href="/wgpsec/base/network-http.html" title="【网络基础】HTTP协议" class="sidebar-link">【网络基础】HTTP协议</a></li><li><a href="/wgpsec/base/network-https.html" title="【网络基础】SSL双向认证" class="sidebar-link">【网络基础】SSL双向认证</a></li><li><a href="/wgpsec/base/network-route.html" aria-current="page" title="【网络基础】路由协议" class="active sidebar-link">【网络基础】路由协议</a></li><li><a href="/wgpsec/base/linux-cmd.html" title="【操作系统】Linux基础命令" class="sidebar-link">【操作系统】Linux基础命令</a></li><li><a href="/wgpsec/base/linux-awk.html" title="【操作系统】Linux三剑客" class="sidebar-link">【操作系统】Linux三剑客</a></li><li><a href="/wgpsec/base/git-base.html" title="Git基本用法" class="sidebar-link">Git基本用法</a></li><li><a href="/wgpsec/base/docker-base.html" title="Docker微服务构建指南" class="sidebar-link">Docker微服务构建指南</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工具手册</span> <span class="arrow right"><i aria-label="icon: down" class="anticon anticon-down"><svg viewBox="64 64 896 896" focusable="false" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Web安全</span> <span class="arrow right"><i aria-label="icon: down" class="anticon anticon-down"><svg viewBox="64 64 896 896" focusable="false" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>攻防对抗</span> <span class="arrow right"><i aria-label="icon: down" class="anticon anticon-down"><svg viewBox="64 64 896 896" focusable="false" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>代码审计</span> <span class="arrow right"><i aria-label="icon: down" class="anticon anticon-down"><svg viewBox="64 64 896 896" focusable="false" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></span></p> <!----></section></li></ul></aside> <main class="page"> <div class="theme-antdocs-content content__default"><h1 id="路由协议基础">路由协议基础 <a href="#路由协议基础" class="header-anchor">#</a></h1> <h3 id="简介">简介 <a href="#简介" class="header-anchor">#</a></h3> <blockquote><p>路由（Routing）是数据通信网络中一个基本的概念。</p> <p>路由就是通过互联的网络把信息从源地址传输到目的地址的活动。</p> <p>路由发生在OSI网络参考模型中的第三层（即网络层）。</p> <p>我们将具有路由转发功能的设备称为广义上的路由器。</p></blockquote> <p>当路由器收到一个IP数据包，路由器会根据目的IP地址在设备上的路由表（Routing Table）中进行查找，</p> <p>找到“最匹配”的路由条目后，将数据包根据路由条目所指示的出接口或下一跳IP转发出去。</p> <p>路由表中装载着路由器通过各种途径获知的路由条目（Routes）。</p> <p>路由器可通过静态、动态等方式获取路由条目并维护自己的路由表。</p> <h3 id="常见路由协议分类"><strong>常见路由协议分类</strong> <a href="#常见路由协议分类" class="header-anchor">#</a></h3> <blockquote><ul><li>OSPF（Open Shortest Path First）</li> <li>RIP（Routing Information Protocol）</li> <li>IS-IS（Intermediate System to Intermediate System）</li> <li>BGP（Border Gateway Protocol）</li></ul> <p>其中，<strong>最多</strong>被使用到的路由协议为<strong>OSPF和BGP</strong>。</p></blockquote> <ul><li>按照路由协议使用的<strong>算法</strong>分：
+<ul><li>距离矢量路由协议，例如：RIP和BGP。其中，BGP也被称为路径矢量协议（Path-Vector Protocol）</li> <li>链路状态路由协议，例如：OSPF 和IS-IS。</li></ul></li> <li>按照路由协议<strong>作用的区域</strong>划分：
+<ul><li>内部网关协议<strong>IGP</strong>（Interior Gateway Protocol），在单一的自治系统中交换路由信息，例如：OSPF、RIP、IS-IS</li> <li>外部网关协议<strong>EGP</strong>（Exterior Gateway Protocol），在不同的自治系统中交换路由信息，例如：BGP</li></ul></li></ul> <h3 id="路由器基本原理"><strong>路由器基本原理</strong> <a href="#路由器基本原理" class="header-anchor">#</a></h3> <p>在因特网中，网络连接设备用来控制网络流量和保证网络数据传输质量。</p> <p>常见的网络连接设备有集线器（Hub）、网桥（Bridge）、交换机（Switch）和路由器（Router）</p> <p><strong>路由就是报文从源端到目的端的路径。</strong></p> <p>当报文从路由器到目的网段有多条路由可达时，路由器可以根据路由表中最佳路由进行转发。</p> <p>最佳路由的选取与发现此路由的路由协议的优先级、路由的度量有关。</p> <p>当多条路由的协议优先级与路由度量都相同时，可以实现负载分担，缓解网络压力；</p> <p>当多条路由的协议优先级与路由度量不同时，可以构成路由备份，提高网络的可靠性。</p> <h3 id="路由迭代"><strong>路由迭代</strong> <a href="#路由迭代" class="header-anchor">#</a></h3> <blockquote><p>路由必须有直连的下一跳才能够指导转发，但是路由生成时下一跳可能不是直连的</p> <p>因此需要计算出一个直连的下一跳和对应的出接口，这个过程就叫做路由迭代。</p></blockquote> <p>BGP路由、静态路由和UNR路由的下一跳都有可能不是直连的，都需要进行路由迭代。</p> <h1 id="静态路由与动态路由">静态路由与动态路由 <a href="#静态路由与动态路由" class="header-anchor">#</a></h1> <blockquote><ul><li>通过<strong>链路层协议</strong>发现的路由称为<strong>直连路由</strong>。</li> <li>通过网络管理员<strong>手动配置</strong>的路由称为<strong>静态路由</strong>。</li> <li>通过<strong>动态路由协议</strong>发现的路由称为<strong>动态路由</strong>。</li></ul></blockquote> <p><strong>静态路由</strong>配置方便，对系统要求低，适用于拓扑结构简单并且稳定的小型网络。缺点是不能自动适应网络拓扑的变化，需要人工干预。</p> <p><strong>动态路由</strong>协议有自己的路由算法，能够自动适应网络拓扑的变化，适用于具有一定数量三层设备的网络。</p> <p>缺点是配置对用户要求比较高，对系统的要求高于静态路由，并将占用一定的网络资源和系统资源。</p> <h1 id="路由表和fib表">路由表和FIB表 <a href="#路由表和fib表" class="header-anchor">#</a></h1> <blockquote><p>路由器转发数据包的关键是路由表和FIB表，每个路由器都至少保存着一张路由表和一张FIB（<strong>Forwarding Information Base</strong>）表。</p> <p>路由器通过路由表选择路由，通过FIB表指导报文进行转发。</p></blockquote> <h3 id="路由表"><strong>路由表</strong> <a href="#路由表" class="header-anchor">#</a></h3> <p>每台路由器中都保存着一张本地核心路由表（即设备的IP路由表），同时各个路由协议也维护着自己的路由表。</p> <p><strong>本地核心路由表</strong></p> <p>路由器使用本地核心路由表用来保存决策优选路由，并负责把优选路由下发到FIB表，通过FIB表指导报文进行转发。</p> <p>这张路由表依据各种路由协议的优先级和度量值来选取路由。</p> <p><strong>协议路由表</strong></p> <p>协议路由表中存放着该协议发现的路由信息。路由协议可以引入并发布其他协议生成的路由。</p> <p>例如，在路由器上运行OSPF协议，需要使用OSPF协议通告直连路由、静态路由或者IS-IS路由时，要将这些路由引入到OSPF协议的路由表中。</p> <p><strong>查看路由器的路由表概要信息</strong></p> <p>在路由器中，执行命令</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>display <span class="token function">ip</span> routing-table
+
+<span class="token comment">#示例结果</span>
+Destination/Mask    Proto   Pre  Cost      Flags NextHop         Interface      
+                                                                                
+     <span class="token number">0.0</span>.0.0/0    Static  <span class="token number">60</span>   <span class="token number">0</span>          RD   <span class="token number">10.137</span>.216.1    Vlanif20
+     <span class="token number">10.10</span>.10.1/24 Direct  <span class="token number">0</span>   	<span class="token number">0</span>          D   	<span class="token number">10.10</span>.10.10    	Vlanif20
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>**Destination：**表示此路由的目的地址。用来标识IP包的目的地址或目的网络。</p> <p>**Mask：**表示此目的地址的子网掩码长度。与目的地址一起来标识目的主机或路由器所在的网段的地址。</p> <blockquote><p>将目的地址和子网掩码“逻辑与”后可得到目的主机或路由器所在网段的地址。</p> <p>例如：目的地址为10.1.1.1，掩码为255.255.255.0的主机或路由器所在网段的地址为10.1.1.0。</p> <p>掩码由若干个连续“1”构成，既可以用点分十进制表示，也可以用掩码中连续“1”的个数来表示。</p> <p>例如掩码255.255.255.0长度为24，即可以表示为24。</p></blockquote> <p>**Proto：**表示学习此路由的路由协议。</p> <p>**Pre：**表示此路由的路由协议优先级。优先级高（数值小）者将成为当前的最优路由。</p> <p>**Cost：**路由开销。当到达同一目的地的多条路由具有相同的路由优先级时，路由开销最小的将成为当前的最优路由。</p> <blockquote><p><strong>Preference</strong>用于<strong>不同路由协议</strong>间路由优先级的比较，<strong>Cost</strong>用于<strong>同一种路由协议</strong>内部<strong>不同路由</strong>的优先级的比较。</p></blockquote> <p>**NextHop：**表示此路由的下一跳地址。指明数据转发的下一个设备。</p> <p>**Interface：**表示此路由的出接口。指明数据将从本地路由器哪个接口转发出去。</p> <h3 id="fib表匹配"><strong>FIB表匹配</strong> <a href="#fib表匹配" class="header-anchor">#</a></h3> <p>在路由表选择出路由后，路由表会将激活路由下发到FIB表中。当报文到达路由器时，会通过查找FIB表进行转发。</p> <p>FIB表中每条转发项都指明到达某网段或某主机的报文应通过路由器的哪个物理接口或逻辑接口发送，然后就可到达该路径的下一个路由器或主机</p> <p>FIB表的匹配遵循最长匹配原则。</p> <h1 id="路由协议的优先级">路由协议的优先级 <a href="#路由协议的优先级" class="header-anchor">#</a></h1> <blockquote><p><strong>总体上：直连 &gt; OSPF &gt; IS-IS &gt; 静态路由 &gt; RIP &gt;BGP</strong></p></blockquote> <p>路由器分别定义了外部优先级和内部优先级。</p> <p>其中，0表示直接连接的路由，255表示任何来自不可信源端的路由；数值越小表明优先级越高。</p> <p>外部优先级是指用户可以手工为各路由协议配置的优先级</p> <p><strong>表4-1</strong> <strong>路由协议缺省时的外部优先级</strong></p> <table><thead><tr><th>路由协议的类型</th> <th>路由协议的外部优先级</th></tr></thead> <tbody><tr><td>Direct</td> <td>0</td></tr> <tr><td>OSPF</td> <td>10</td></tr> <tr><td>IS-IS</td> <td>15</td></tr> <tr><td>Static</td> <td>60</td></tr> <tr><td>RIP</td> <td>100</td></tr> <tr><td>OSPF ASE</td> <td>150</td></tr> <tr><td>OSPF NSSA</td> <td>150</td></tr> <tr><td>IBGP</td> <td>255</td></tr> <tr><td>EBGP</td> <td>255</td></tr></tbody></table> <p>路由协议的内部优先级则不能被用户手工修改</p> <p><strong>表4-2</strong> <strong>路由协议内部优先级</strong></p> <table><thead><tr><th>路由协议的类型</th> <th>路由协议的内部优先级</th></tr></thead> <tbody><tr><td>Direct</td> <td>0</td></tr> <tr><td>OSPF</td> <td>10</td></tr> <tr><td>IS-IS Level-1</td> <td>15</td></tr> <tr><td>IS-IS Level-2</td> <td>18</td></tr> <tr><td>Static</td> <td>60</td></tr> <tr><td>RIP</td> <td>100</td></tr> <tr><td>OSPF ASE</td> <td>150</td></tr> <tr><td>OSPF NSSA</td> <td>150</td></tr> <tr><td>IBGP</td> <td>200</td></tr> <tr><td>EBGP</td> <td>20</td></tr></tbody></table> <h1 id="路由的度量">路由的度量 <a href="#路由的度量" class="header-anchor">#</a></h1> <p>路由的度量标示出了这条路由到达指定的目的地址的代价，通常以下因素会影响到路由的度量。</p> <h3 id="路径长度"><strong>路径长度</strong> <a href="#路径长度" class="header-anchor">#</a></h3> <p>路径长度是最常见的影响路由度量的因素。</p> <p>链路状态路由协议可以为每一条链路设置一个链路开销来标示此链路的路径长度。</p> <p>在这种情况下，路径长度是指经过的所有链路的链路开销的总和。</p> <p>距离矢量路由协议使用跳数来标示路径长度。</p> <p>跳数是指数据从源端到目的端所经过的设备数量。</p> <p>例如，路由器到与它直接相连网络的跳数为0，通过一台路由器可达的网络的跳数为1，其余以此类推。</p> <h3 id="网络带宽"><strong>网络带宽</strong> <a href="#网络带宽" class="header-anchor">#</a></h3> <p>网络带宽是一个链路实际的传输能力。</p> <p>例如，一个10千兆的链路要比1千兆的链路更优越。</p> <p>虽然带宽是指一个链路能达到的最大传输速率，但这不能说明在高带宽链路上路由要比低带宽链路上更优越。</p> <p>比如说，一个高带宽的链路正处于拥塞的状态下，那报文在这条链路上转发时将会花费更多的时间。</p> <h3 id="负载"><strong>负载</strong> <a href="#负载" class="header-anchor">#</a></h3> <p>负载是一个网络资源的使用程度。</p> <p>计算负载方法包括CPU的利用率和它每秒处理数据包的数量。</p> <p>持续监测这些参数可以及时了解网络的使用情况。</p> <h3 id="通信开销"><strong>通信开销</strong> <a href="#通信开销" class="header-anchor">#</a></h3> <p>通信开销衡量了一条链路的运营成本。</p> <p>尤其是只注重运营成本而不在乎网络性能的时候，通信开销则就成了一个重要的指标。</p> <h1 id="负载分担与路由备份">负载分担与路由备份 <a href="#负载分担与路由备份" class="header-anchor">#</a></h1> <blockquote><p>当多条路由的路由优先级和路由度量都相同时，这几条路由就称为等价路由，多条等价路由可以实现负载分担。</p> <p>当这几条路由为非等价路由时，就可以实现路由备份。</p></blockquote> <h3 id="负载分担"><strong>负载分担</strong> <a href="#负载分担" class="header-anchor">#</a></h3> <p>当到达同一目的地存在同一路由协议发现的多条路由时，且这几条路由的开销值也相同，那么就满足负载分担的条件。</p> <p>当实现负载分担时，路由器根据五元组（源地址、目的地址、源端口、目的端口、协议）进行转发</p> <p>当五元组相同时，路由器总是选择与上一次相同的下一跳地址发送报文。</p> <p>当五元组不同时，路由器会选取相对空闲的路径进行转发。</p> <h3 id="路由备份"><strong>路由备份</strong> <a href="#路由备份" class="header-anchor">#</a></h3> <p>路由备份功能，可以提高网络的可靠性。</p> <p>用户可以根据实际情况，配置到同一目的地的多条路由，其中一条路由的优先级最高，作为主路由，其余的路由优先级较低，作为备份路由。</p> <p>正常情况下，路由器采用主路由转发数据。</p> <p>当主链路出现故障时，主路由变为非激活状态，路由器选择备份路由中优先级最高的路由转发数据。</p> <p>这样，也就实现了主路由到备份路由的切换。</p> <p>当主链路恢复正常时，由于主路由的优先级最高，路由器重新选择主路由来发送数据。</p> <p>这样，就实现了从备份路由回切到主路由。</p> <h1 id="其它术语含义">其它术语含义 <a href="#其它术语含义" class="header-anchor">#</a></h1> <h3 id="ip-frr"><strong>IP FRR</strong> <a href="#ip-frr" class="header-anchor">#</a></h3> <p>快速重路由（Fast Reroute），是指当物理层或链路层检测到故障时将故障消息上报至上层路由系统，并立即启用一条备份链路转发报文。</p> <p>IP FRR是一种快速实现路由备份的方式。</p> <h3 id="路由的收敛"><strong>路由的收敛</strong> <a href="#路由的收敛" class="header-anchor">#</a></h3> <p>路由收敛是指网络<strong>拓扑变化</strong>引起的通过<strong>重新计算路由</strong>而发现<strong>替代路由</strong>的行为。随着网络的融合，区分服务的需求越来越强烈。</p> <p>某些路由可能指导关键业务的转发，如VoIP，视频会议、组播等，这些关键的业务路由需要尽快收敛，而非关键路由可以相对慢一点收敛。</p> <p>因此，系统需要对不同路由按不同的收敛优先级处理，来提高网络可靠性。</p> <p>按优先级收敛是指系统为路由设置不同的收敛优先级，分为critical、high、medium、low四种。</p> <p>系统根据这些路由的收敛优先级采用相对的优先收敛原则，即按照一定的调度比例进行路由收敛安装，指导业务的优先转发。</p> <p>路由协议优先计算并下发高收敛优先级的路由给系统。</p> <h3 id="缺省路由"><strong>缺省路由</strong> <a href="#缺省路由" class="header-anchor">#</a></h3> <p>缺省路由是没有在路由表中找到匹配的路由表项时才使用的路由。</p> <p>如果报文的目的地址不能与路由表的任何目的地址相匹配，那么该报文将选取缺省路由进行转发。</p> <p>如果没有缺省路由且报文的目的地址不在路由表中，那么该报文将被丢弃</p> <p>并向源端返回一个ICMP（Internet Control Message Protocol）报文，报告该目的地址或网络不可达。</p> <p>在路由表中，缺省路由以到网络0.0.0.0（掩码也为0.0.0.0）的路由形式出现。</p> <p>可通过命令<code>display ip routing-table</code>查看当前是否设置了缺省路由。</p> <p>通常情况下，管理员可以通过手工方式配置缺省静态路由；但有些时候，也可以使动态路由协议生成缺省路由，如OSPF和IS-IS。</p> <h3 id="不同路由协议的互相引入"><strong>不同路由协议的互相引入</strong> <a href="#不同路由协议的互相引入" class="header-anchor">#</a></h3> <p>由于采用的算法不同，不同的路由协议可以发现不同的路由。</p> <p>当网络规模比较大，使用多种路由协议时，不同的路由协议间通常需要发布其他路由协议发现的路由。</p> <p>各路由协议都可以引入其它路由协议的路由、直连路由和静态路由，每种路由协议都有相应的路由引入机制。</p> <h3 id="自治系统"><strong>自治系统</strong> <a href="#自治系统" class="header-anchor">#</a></h3> <p>在互联网中，自治系统AS（Autonomous System）是指在一个（有时是多个）实体管辖下的所有IP网络和路由器的网络</p> <p>它们对互联网执行共同的路由策略。每一个AS可以支持多个内部网关路由协议。</p> <p>一个AS内的所有网络都被分配同一个AS号，属于一个行政单位管辖。</p> <p>AS号分为2字节AS号和4字节AS号。其中2字节AS号的范围为1至65535。</p> <p>随着时间推进，可分配的2字节AS号已经濒临枯竭，需要将AS号的范围从之前的2字节扩展为4字节，其中4字节AS号的取值范围为1至4294967295。</p> <p>4字节AS号还可以用X.Y的形式表示，其中X的取值范围为1至65535，Y的取值范围为0至65535。</p> <p><strong>表7-1 AS号的分类及其取值范围</strong></p> <table><thead><tr><th>AS号的类别</th> <th>2字节AS号</th> <th>4字节AS号</th></tr></thead> <tbody><tr><td>公有AS号</td> <td>1～64511</td> <td>1～64511,65536～4294967295</td></tr> <tr><td>私有AS号</td> <td>64512～65535</td> <td>64512～65535</td></tr></tbody></table> <h3 id="可变长子网掩码"><strong>可变长子网掩码</strong> <a href="#可变长子网掩码" class="header-anchor">#</a></h3> <p>可变长子网掩码VLSM（Variable-Length Subnet Masks）规定了如何在一个进行了子网划分的网络中的不同部分使用不同的子网掩码。</p> <p>适用于网络内部需要不同大小子网的场景。实现VLSM通常被称为“子网划分子网”。</p> <p>A类的第一段是网络号（前八位），B类地址的前两段是网络号（前十六位），C类的前三段是网络号（前二十四位）。</p> <p>而VLSM的作用就是在类的IP地址的基础上，从它们的主机号部分借出相应的位数来做网络号，也就是增加网络号的位数。</p> <h3 id="全0和全1子网"><strong>全0和全1子网</strong> <a href="#全0和全1子网" class="header-anchor">#</a></h3> <p>通过将IP地址的主机部分进一步划分为若干个子网，可以解决IP地址空间利用率低和两级IP地址不够灵活的问题。</p> <p>其中，全0的主机号码表示该IP地址就是网络的地址，用于网络路由；</p> <p>全1的主机号码表示广播地址，即对该网络上所有的主机进行广播。</p> <h3 id="路由策略"><strong>路由策略</strong> <a href="#路由策略" class="header-anchor">#</a></h3> <p>路由策略主要实现了路由过滤和路由属性设置等功能，它通过改变路由属性（包括可达性）来改变网络流量所经过的路径。</p> <p><strong>目的</strong></p> <p>路由协议在发布、接收和引入路由信息时，根据实际组网需求实施一些策略，以便对路由信息进行过滤和改变路由信息的属性：</p> <blockquote><p><strong>控制路由的接收和发布</strong></p> <p>只发布和接收必要、合法的路由信息，以控制路由表的容量，提高网络的安全性。</p> <p><strong>控制路由的引入</strong></p> <p>在一种路由协议在引入其它路由协议发现的路由信息丰富自己的路由信息时，只引入一部分满足条件的路由信息。</p> <p><strong>设置特定路由的属性</strong></p> <p>修改通过路由策略过滤的路由的属性，满足自身需要。</p></blockquote> <h3 id="策略路由"><strong>策略路由</strong> <a href="#策略路由" class="header-anchor">#</a></h3> <p>策略路由PBR（Policy-Based Routing）是一种依据用户制定的策略进行路由选择的机制。</p> <p><strong>目的</strong></p> <blockquote><p>传统的路由转发原理是首先根据报文的目的地址查找路由表，然后进行报文转发。</p> <p>但是目前越来越多的用户希望能够在传统路由转发的基础上根据自己定义的策略进行报文转发和选路。</p> <p>策略路由使网络管理者不仅能够根据报文的目的地址，</p> <p>而且能够根据报文的源地址、报文大小和链路质量等属性来制定策略路由，以改变数据包转发路径，满足用户需求。</p> <p>策略路由只对转发的报文起作用，对本地下发的报文（比如本地的Ping报文）不起作用。策略路由仅对IP类型的报文生效。</p></blockquote> <h1 id="重要学习参考资料">重要学习参考资料 <a href="#重要学习参考资料" class="header-anchor">#</a></h1> <h3 id="路由协议-ospf、rip、bgp的详细原理和配置"><a href="https://support.huawei.com/enterprise/zh/doc/EDOC1000141374/766cc4cd" target="_blank" rel="noopener noreferrer">路由协议 -&gt; OSPF、RIP、BGP的详细原理和配置<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <a href="#路由协议-ospf、rip、bgp的详细原理和配置" class="header-anchor">#</a></h3> <h3 id="wireshark协议分析教程-51cto"><a href="https://edu.51cto.com/center/course/lesson/index?id=62643" target="_blank" rel="noopener noreferrer">wireshark协议分析教程 (51CTO) <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <a href="#wireshark协议分析教程-51cto" class="header-anchor">#</a></h3> <h3 id="华为的在线课堂-更多路由交换技术学习"><a href="https://support.huawei.com/onlinetoolweb/ptmngsys/Web/OnlineCourse/zh/index.html" target="_blank" rel="noopener noreferrer">华为的在线课堂-&gt;更多路由交换技术学习<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <a href="#华为的在线课堂-更多路由交换技术学习" class="header-anchor">#</a></h3> <h1 id="附录">附录 <a href="#附录" class="header-anchor">#</a></h1> <p>除了下边的题目还可以去<a href="https://www.nowcoder.com/intelligentTest" target="_blank" rel="noopener noreferrer">牛客网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>的<strong>专项练习-&gt;网络基础</strong>、<strong>试题广场</strong>寻找</p> <h3 id="路由交换技术选择题">路由交换技术选择题 <a href="#路由交换技术选择题" class="header-anchor">#</a></h3> <p>1、<strong>交换机和路由器相比,主要的区别有 ( AB )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 交换机工作在 OSI 参考模型的第二层
+B. 路由器工作在 OSI 参考模型的第三层
+C. 交换机的一个端口划分一个广播域的边界
+D. 路由器的一个端口划分一个冲突域的边界
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>2、<strong>以下不会在路由表里出现的是 : ( D )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 下一跳地址
+B. 网络地址
+C. 度量值
+D. MAC 地址
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>3、<strong>路由器是一种用于网络互连的计算机设备, 但作为路由器,并不具备的是 ( B )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 支持多种路由协议
+B. 多层交换功能
+C. 支持多种可路由协议
+D. 具有存储、转发、寻址功能
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>4、<strong>路由器在转发数据包到非直连网段的过程中, 依靠数据 包中的哪一个选项来寻找下一跳地址 ( B )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 帧头
+B. IP 报文头部
+C. SSAP 字段
+D. DSAP 字段
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>5、<strong>IP 地址 190.233.27.13是(B )类地址</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. A
+B. B
+C. C
+D. D
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>6、<strong>IP 地址 224.0.0.5代表的是什么地址 ? ( C )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 主机地址
+B. 网络地址
+C. 组播地址
+D. 广播地址
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>7、<strong>在 TCP/IP协议栈中, 下面哪一组选项能够唯一地确定一 个 TCP 连接:( D )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 源 IP 地址和源端口号
+B. 源 IP 地址和目的端口号
+C. 目的地址和源端口号
+D. 源地址、目的地址、源端口号和目的端口号
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>8、<strong>如果要满足全线速二层(全双工)转发,则某种带有 24个固定 10/100M端口的交换机的背板带宽最小应为多 少? ( D )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 24Gbps
+B. 12Gbps
+C. 2.4Gbps
+D. 4.8Gbps
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>9、<strong>下面的描述正确的是:( BCD )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 集线器工作在 OSI 参考模型的第一、二两层
+B. 集线器能够起到放大信号,增大网络传输距离的作用
+C. 集线器上连接的所有设备同属于一个冲突域
+D. 集线器支持 CSMA/CD技术
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>10、<strong>在访问控制列表中地址和屏蔽码为 168.18.0.0 0.0.0.255所表示的 IP 地址范围是 ( B )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 168.18.67.1~168.18.70.255
+B. 168.18.0.1~168.18.0.255
+C. 168.18.63.1~168.18.64.255
+D. 168.18.64.255~168.18.67.255
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>11、<strong>请问能够在路由器的下列哪个模式使用 debug 命令 ( B )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 用户模式
+B. 特权模式
+C. 全局配置模式
+D. 接口配置模式
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>12、<strong>下面的说法正确的是 ( ABD )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. DNS 是用来解析 IP 地址和域名地址(互联网地址) 的
+B. 默认网关是互连内网和外网的通道
+C. 每个 Windows 用户都可以创建域,并使用域中的一 个帐号
+D. 每个 Windows 用户都可以创建工作组,创建了一个 工作组,计算机重启后就会自动加入到该工作组
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>13、<strong>数据分段(segment )是 OSI 七层模型中的哪一层的数据名称 ( D )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 物理层
+B. 数据链路层
+C. 网络层
+D. 传输层
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>14、<strong>集线器目前一般应用最多的是在 ( A )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 一个办公室内部实现互连的时候
+B. 一个楼层各个办公室的互连
+C. 一个多媒体教室中主机的互连
+D. 一个建筑物内部两个地点间距离超过了 200米的 时候
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>15、<strong>下列属于距离矢量路由协议容易引起的问题是 : ( C )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 水平分割
+B. 路径中毒
+C. 计数到无穷
+D. 抑制时间
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>16、<strong>如果对 C 类地址段 193.11.22.0/24进行可变长子网划分, 则下列地址能够成为其子网地址的有: BC</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 193.11.22.174
+B. 193.11.22.192
+C. 193.11.22.172
+D. 193.11.22.122
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>17、<strong>下列 VLSM 的理解正确的是 : ( ACD )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. VLSM 就是 Variable Length Subnet Mask的缩写形 式,即可变长子网掩码
+B. 是指使用不同于整个字节的子网掩码划分方法, 使用按位划分网络位和主机位的子网划分方法
+C. 如果仅仅使用非整字节的子网掩码位数,并不能 称之为 VLSM
+D. 如果一个企业使用了一个 C 类的网络进行了整体的规划,并且划分了至少 6个不同大小的网络,则可以肯定这个企业内部的 IP 地址一定使用了 VLSM 进行规划
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>18、<strong>IP 地址为:192.168.100.138, 子网掩码为:255.255.255.192所在的网络地址是什么,和 IP 地址 192.168.100.153是否 在同一个网段? ( A )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 192.168.100.128,是
+B. 192.168.100.0, 是
+C. 192.168.100.138, 是
+D. 192.168.100.128, 不是
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>19、<strong>一个网段 150.25.0.0的子网掩码是 255.255.224.0,(BCD )是有效的主机地址</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 150.25.0.0
+B. 150.25.16.255
+C. 150.25.2.24
+D. 150.15..30
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>20、<strong>一个 B 类网络 , 有 5位掩码加入缺省掩码用来划分子网 , 每 个子网最多(D )台主机</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 510
+B. 512
+C. 1022
+D. 2046
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>21、<strong>BPDU 报文是通过(C )进行传送的</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. IP 报文
+B. TCP 报文
+C. 以太网帧
+D. UDP 报文
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>22、<strong>下列对 IEEE802.1Q 标准的理解正确的是:( BD )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 它在 MAC 层帧中插入了一个 16bit 的 VLAN 标识符
+B. 它通过插入 3个 bit 位来定义 802.1p 优先级,对流入交换机的帧进行排序
+C. 一旦在交换机中启动了 IEEE802.1Q VLAN标记功 能,则所有进出交换机的帧都被加了标记
+D. IEEE802.1Q 解决了跨交换机的相同 VLAN 间的通信 问题
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>23、<strong>要想拒绝主机 192.168.100.3/24访问服务器201.10.182.10/24的 WWW 服务,下面的访问控制列表配 置及其模式均正确的是:( D )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. Router#ip access-list 101 deny tcp 192.168.100.3 0.0.0.255 201.10.182.10 0.0.0.255 eq 80
+
+B. Router(config)#ip access-list 10 deny tcp 192.168.100.30 0.0.0.255 201.10.182.10 0.0.0.255 eq 80
+
+C. Router(config-serial1/0)#ip access-list 10 deny tcp 192.168.100.3 0.0.0.255 201.10.182.10 0.0.0.255 eq 80
+
+D. Router(config)#ip access-list 101 deny tcp 192.168.100.3 0.0.0.255 201.10.182.10 0.0.0.255 eq 80
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>24、<strong>下列对访问控制列表的描述不正确的是:( C )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 访问控制列表能决定数据是否可以到达某处
+B. 访问控制列表可以用来定义某些过滤器
+C. 一旦定义了访问控制列表,则其所规范的某些 数据包就会严格被允许或拒绝
+D. 访问控制列表可以应用于路由更新的过程当中
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>25、<strong>以下情况可以使用访问控制列表准确描述的是:( C )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 禁止有 CIH 病毒的文件到我的主机
+B. 只允许系统管理员可以访问我的主机
+C. 禁止所有使用 Telnet 的用户访问我的主机
+D. 禁止使用 UNIX 系统的用户访问我的主机
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>26、<strong>路由器中时刻维持着一张路由表, 这张路由表可以是静 态配置的,也可以是(C )产生的</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 生成树协议
+B. 链路控制协议
+C. 动态路由协议
+D. 被承载网络层协议
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>27、<strong>以太网交换机的每一个端口可以看做一个 ( A )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 冲突域
+B. 广播域
+C. 管理域
+D. 阻塞域
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>28、<strong>下面的描述正确的是:( C )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 集线器不能延伸网络的可操作的距离
+B. 集线器不能在网络上发送变弱的信号
+C. 集线器不能过滤网络流量
+D. 集线器不能放大变弱的信号
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>29、<strong>DNS 的作用是 ( C )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 为客户机分配 IP 地址
+B. 访问 HTTP 的应用程序
+C. 将域名翻译为 IP 地址
+D. 将 MAC 地址翻译为 IP 地址
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>30、<strong>OSI 代表什么 ( D )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 标准协会组织
+B. Internet 标准组织
+C. 开放标准协会
+D. 开放系统互连
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>31、<strong>当路由器接收的 IP 报文中的目标网络不在路由表中时, (没有缺省路由时)采取的策略是 ( A )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 丢掉该报文
+B. 将该报文以广播的形式发送到所有直连端口
+C. 直接向支持广播的直连端口转发该报文
+D. 向源路由器发出请求,减小其报文大小
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>32、<strong>当路由器接收的 IP 报文的生存时间值等于 1时,采取的 策略是 ( A )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 丢掉该报文
+B. 转发该报文
+C. 将该报文分段
+D. 其它三项答案均不对
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>33、<strong>一个 C 类网络需要划分 5个子网,每个子网至少包含 32个主机,请问,合适的子网掩码应为多少? ( D )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 255.255.255.224
+B. 255.255.255.192
+C. 255.255.255.252
+D. 没有合适的子网掩码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>34、<strong>规划一个 C 类网 , 需要将整个网络分为 9个子网 , 最大的子 网有 15台主机 , 下列哪个是合适的子网掩码 ? ( D )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 255.255.224.0
+B. 255.255.255.224
+C. 255.255.255.240
+D. 没有合适的子网掩码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>35、<strong>下列地址表示私有地址的是:( DE )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 202.118.56.21
+B. 1.2.3.4
+C. 192.118.2.1
+D. 172.16.33.78
+E. 10.0.1.2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>私有IP地址范围有：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A类：10.0.0.0-10.255.255.255
+B类：172.16.0.0-172.31.255.255
+C类：192.168.0.0-192.168.255.255
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>36、<strong>某台路由器上配置了如下一条访问列表 ( C )</strong></p> <p>access-list 4 permit 202.38.160.1 0.0.0.255</p> <p>access-list 4 deny 202.38.0.0 0.0.255.255</p> <p><strong>表示:</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 只禁止源地址为 202.38.0.0网段的所有访问
+B. 只允许目的地址为 202.38.0.0网段的所有访问
+C. 检查源 IP 地址,禁止 202.38.0.0大网段的主机, 但允许其中的 202.38.160.0小网段上的主机 
+D. 检查目的 IP 地址,禁止 202.38.0.0大网段的主 机,但允许其中的 202.38.160.0小网段的主机 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>37、<strong>交换机如何转发收到的二层数据帧? ( A )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 比较数据帧的 MAC 地址是否在 MAC 端口对应表中命 中,如果命中即向此端口转发
+B. 比较数据帧的 MAC 地址是否在 MAC 端口对应表中命 中,如果没有命中即丢弃该帧
+C. 交换机存储此二层数据帧,待目的设备发出查询, 再发向目的设备
+D. 交换机察看二层帧对应的 IP 地址是否在端口地址 表中,如果在,则向所有端口转发
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>38、<strong>下面关于生成树协议优缺点描述不正确的是 ( C )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 生成树协议能够管理冗余链路
+B. 生成树协议能够阻断冗余链路,防止环路的产生
+C. 生成树协议能够防止网络临时失去连通性
+D. 生成树协议能够使透明网桥工作在存在物理环路 的网络环境中
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>39、<strong>在以太网中, 是根据 (D )地址来区分不同的设备的</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. IP 地址
+B. IPX 地址
+C. LLC 地址
+D. MAC 地址
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>40、<strong>路由器启动时访问不同类型存储器的先后顺序是: ( A )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. ROM -&gt;FLASH-&gt;NVRAM
+B. FLASH -&gt;ROM-&gt;NVRAM
+C. ROM -&gt;NVRAM-&gt;FLASH
+D. FLASH -&gt;NVRAM-&gt;ROM
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>41、<strong>以下对于缺省路由描述正确的是:( BC )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 缺省路由是优先被使用的路由
+B. 缺省路由是最后一条被使用的路由
+C. 缺省路由是一种特殊的静态路由
+D. 缺省路由是一种特殊的动态路由 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>42、<strong>目前网络设备的 MAC 地址由(C )位二进制数字构 成, IP 地址由 ___位二进制数字构成</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 48, 16
+B. 64, 32
+C. 48, 32
+D. 48, 48
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>43、<strong>在缺省的情况下, 如果一台路由器在所有接口同时运行 了 RIP 和 OSPF 两种动态路由协议, 下列说法中正确的是 : ( B )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 针对到达同一网络的路径,在路由表中只会显示 RIP 发现的那一条,因为 RIP 协议的优先级更高 
+B. 针对到达同一网络的路径,在路由表中只会显示 OSPF 发现的那一条, 因为 OSPF 协议的优先级更高 
+C. 针对到达同一网络的路径,在路由表中只会显示 RIP 发现的那一条, 因为 RIP 协议的花费值 (metric ) 更小
+D. 针对到达同一网络的路径,在路由表中只会显示 OSPF 发现的那一条,因为 OSPF 协议的花费值 (metric )更小
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>44、<strong>解决路由环问题的方法有 ( ABD )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 水平分割
+B. 触发更新
+C. 路由器重启
+D. 定义最大跳步数
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>45、<strong>IP 报文头中固定长度部分为(B )字节</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 10
+B. 20
+C. 30
+D. 40
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>46、<strong>一个 32位的 IP 地址与它的掩码作异或计算,所得到的 32位二进制数是此 IP 地址的 ( B )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. A 类地址
+B. 主机地址
+C. 网络地址
+D. 解析地址
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>47、<strong>下面有关 HelloTime 时间间隔的配置,描述不正确的为 ( D )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 较长的 HelloTime 可以降低生成树计算的消耗, 因为网桥可以不那么频繁的发送配置消息
+B. 较短的 HelloTime 可以在丢包率较高的时候,增 强生成树的健壮性,避免因为丢包而误认为链路 故障
+C. 过长的 HelloTime 会导致因为链路丢包而使网桥 认为链路故障,开始生成树重新计算
+D. HelloTime 配置的越短越好
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>48、<strong>下列对生成树协议的理解正确的是:( A )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 生成树协议就是在交换网络中形成一个逻辑上的 树形结构,从而避免某些物理上的环路形成的交换网中的无用帧形成的拥塞
+B. 生成树协议实际已经在交换网络中形成了一个物 理上的树形结构
+C. 生成树协议状态一旦稳定,后续发送的数据包将 都沿着这个树形路径转发到目的地
+D. 生成树协议只是为了消除环路的存在,并不能提 供冗余备份地功能
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>49、<strong>如下访问控制列表的含义是:( C )</strong></p> <p>access-list 11 deny icmp 10.1.10.10 0.0.255.255 any host-unreachable</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 规则序列号是 100,禁止发送到 10.1.10.10主机 的所有主机不可达报文
+B. 规则序列号是 100,禁止发送到 10.1.0.0/16网段 的所有主机不可达报文
+C. 规则序列号是 100,禁止从 10.1.0.0/16网段发出 的所有主机不可达报文
+D. 规则序列号是 100,禁止从 10.1.10.10主机发出 的所有主机不可达报文
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>50、<strong>OSPF 协议具有如下特点:( BCD )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 最多可支持近百台路由器
+B. 如果网络的拓扑结构发生变化, OSPF 立即发送更 新报文
+C. 算法本身保证了不会生成自环路由
+D. 区域划分减少了路由更新时占用的网络带宽 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>51、<strong>RARP 的作用是 ( D )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 将自己的 IP 地址转换为 MAC 地址
+B. 将对方的 IP 地址转换为 MAC 地址
+C. 将对方的 MAC 地址转换为 IP 地址
+D. 知道自己的 MAC 地址,通过 RARP 协议得到自己的 IP 地址 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>52、<strong>在无盘工作站向服务器申请 IP 地址时, 使用的是 (B ) 协议</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. ARP
+B. RARP
+C. BOOTP
+D. ICMP
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>53、<strong>当交换机检测到一个数据包携带的目的地址与源地址 属于同一个端口时,交换机会怎样处理? ( B )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 把数据转发到网络上的其他端口
+B. 不再把数据转发到其他端口
+C. 在两个端口间传送数据
+D. 在工作在不同协议的网络间传送数据
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>54、<strong>以下关于以太网交换机的说法哪些是正确的 ? ( D )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 以太网交换机是一种工作在网络层的设备
+B. 以太网交换机最基本的工作原理就是 802.1D
+C. 生成树协议解决了以太网交换机组建虚拟私有网 的需求
+D. 使用以太网交换机可以隔离冲突域
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>55、<strong>关于交换机交换方式的描述正确的是:( B )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 碎片隔离式交换:交换机只检查进入交换机端口 的数据帧头部的目的 MAC 地址部分,即把数据转发 出去
+B. 存储转发式交换:交换机要完整地接收一个数据 帧,并根据校验的结果以确定是否转发数据 
+C. 直通式交换:交换机只转发长度大于 64字节的数 据帧,而隔离掉小于 64字节的数据
+D. 这些说法全部正确
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>56、<strong>下面哪些地址可以正确地表示 MAC 地址:( C )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 0067.8GCD.98EF
+B. 007D.7000.ES89
+C. 0000.3922.6DDB
+D. 0098.FFFF.0AS1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>57、<strong>(A )为两次握手协议,它通过在网络上以明文的 方式传递用户名及口令来对用户进行验证</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. PAP
+B. IPCP
+C. CHAP
+D. RADIUS
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>58、<strong>如果需要配置一个交换机作为网络的根, 则应该配置下 面哪个参数 ( B )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 桥的 HelloTime
+B. 桥的优先级
+C. 该桥所有端口配置为边缘端口
+D. 将给该桥所有端口的路径花费配置为最小
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>59、<strong>广播风暴是如何产生的 ( B )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 大量 ARP 报文产生
+B. 存在环路的情况下,如果端口收到一个广播报 文,则广播报文会增生从而产生广播风暴
+C. 站点太多,产生的广播报文太多
+D. 交换机坏了,将所有的报文都广播
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>60、<strong>下面关于生成树协议的原理描述,哪个是错误的 ( D )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 从网络中的所有网桥中,选出一个作为根网桥 (Root )
+B. 计算本网桥到根网桥的最短路径
+C. 对每个 LAN ,选出离根桥最近的那个网桥作为指定网桥,负责所在 LAN 上的数据转发
+D. 网桥选择若干个根端口,该端口给出的路径是此网桥到根桥的最佳路径
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>61、 <strong>能正确描述了数据封装的过程的是 ( D )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 数据段 -&gt;数据包 -&gt;数据帧 -&gt;数据流 -&gt;数据
+B. 数据流 -&gt;数据段 -&gt;数据包 -&gt;数据帧 -&gt;数据
+C. 数据 -&gt;数据包 -&gt;数据段 -&gt;数据帧 -&gt;数据流
+D. 数据 -&gt;数据段 -&gt;数据包 -&gt;数据帧 -&gt;数据流
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>62、<strong>共享式以太网采用了(D )协议以支持总线型的结构</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. ICMP
+B. ARP
+C. SPX
+D. CSMA/CD
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>62、<strong>采用 CSMA/CD技术的以太网上的两台主机同时发送数据,产生碰撞时,主机应该做何处理 ( A )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 产生冲突的两台主机停止传输,在一个随机时间 后再重新发送
+B. 产生冲突的两台主机发送重定向信息,各自寻找 一条空闲路径传输帧报文
+C. 产生冲突的两台主机停止传输,同时启动计时器, 15秒后重传数据
+D. 主机发送错误信息,继续传输数据
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>63、<strong>集线器一般用于哪种网络拓扑中:( B )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 总线形
+B. 星形网络
+C. 环形网络
+D. 树形网络
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>64、<strong>传输层协议端口号小于(C )的已保留与现有服务 一一对应,此数字以上的端口号可自由分配</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 100
+B. 199
+C. 1024
+D. 2048
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>65、<strong>IP 协议的特征是 ( B )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 可靠 , 无连接
+B. 不可靠 , 无连接
+C. 可靠 , 面向连接
+D. 不可靠 , 面向连接
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>66、<strong>可能会使用以下哪些信息实现地址转换 ( ABC )</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. IP 地址
+B. TCP 端口号
+C. UDP 端口号
+D. 其他都不是
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>67、<strong>D 类地址的缺省子网掩码有(D )位</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>A. 8
+B. 16
+C. 24
+D. 没有子网掩码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>68、交换机如何知道将帧转发到哪个端口 ( A )</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">5/19/2021, 3:01:29 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/wgpsec/base/network-https.html" class="prev"><i aria-label="icon: left" class="anticon anticon-left"><svg viewBox="64 64 896 896" focusable="false" data-icon="left" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 0 0 0 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path></svg></i>
+        【网络基础】SSL双向认证
+      </a></span> <span class="next"><a href="/wgpsec/base/linux-cmd.html">
+        【操作系统】Linux基础命令
+        <i aria-label="icon: right" class="anticon anticon-right"><svg viewBox="64 64 896 896" focusable="false" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path></svg></i></a></span></p></div> </main> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.c3aa4cb1.js" defer></script><script src="/assets/js/2.d0142fc9.js" defer></script><script src="/assets/js/20.08030759.js" defer></script>
+  </body>
+</html>

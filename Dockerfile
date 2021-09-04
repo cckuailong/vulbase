@@ -16,6 +16,8 @@ COPY ./peiqi /var/www/peiqi
 COPY ./qingy/ /var/www/qingy
 COPY ./edge /var/www/edge
 COPY ./pochouse /var/www/pochouse
+COPY ./wgpsec /var/www/wgpsec
+COPY ./assets /var/www/assets
 
 COPY ./img /var/www/img
 COPY ./index.html /var/www/
