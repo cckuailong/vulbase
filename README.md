@@ -4,11 +4,11 @@
 
 - P.S. Peiqi文库的图片已本地化，目前图片可正常访问
 
-### 导航页面
+## 导航页面
 
 ![](./img/index.png)
 
-### docker 运行
+## docker 运行
 
 ```
 docker pull vultarget/vulbase:0.3
@@ -24,6 +24,9 @@ docker run -it -d -p 80:80 vultarget/vulbase:0.3
 ```
 docker run -it -d -e AUTH_PASS="yourpassword" -p 80:80 vultarget/vulbase:0.3
 ```
+
+欢迎关注 **我不是Hacker** 公众号，不定期做一些分享
+![](http://wx.lovebear.cloud/nohacker.png)
 
 ## ChangeLog
 
